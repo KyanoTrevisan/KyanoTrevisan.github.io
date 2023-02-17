@@ -17,7 +17,7 @@ function startTypingAnimation() {
         startTypingAnimation();
       }, 5000); // Wait for 20 seconds before starting the animation again
     }
-  }, 50);
+  }, 100);
 }
 
 startTypingAnimation();
