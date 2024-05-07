@@ -22,61 +22,84 @@
     <ul>
       <li>
         <div class="project-card">
-          <h2>Job Training Application</h2>
+          <h2>4.0: Weed detection system</h2>
+          <img src="images/4-0-ai-visualization.png" alt="big data image classifier">
+          <p>
+            Due to a Non-disclosure Agreement, I am unable to provide more images of the application. However, I have
+            created a visualization to help you understand my part of the project. The client wanted to receive a
+            heatmap showing
+            where certain weeds are present in farm fields. The fields with too many of these weeds are not allowed to
+            be used
+            by the farmer. The process was as follows: we received drone images from the farm fields in (GEO)TIF format,
+            and
+            from the (GEO)TIF images, we could get the coordinates of the top-left corner of where the image was taken.
+            The
+            images were then converted to PNG format, and my AI model (YOLOv8) performed detection on the PNG images,
+            drawing
+            boxes around the
+            weeds and saving the pixel coordinates of the top-left and bottom-right corners of the detections. I then
+            calculated
+            the center of the detections and converted the pixel coordinates to geographical coordinates. Finally, I
+            created a GeoJSON
+            file that could be used by my teammates to create the heatmap.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="project-card">
+          <h2>PHP: Job Training Application</h2>
           <img src="images/job-training-project-1.png" alt="job training application">
           <p>This project involves building a web application using PHP that simulates a job application process,
-            helping students learn and practice the skills required to successfully apply for jobs.
+            helping students learn and practice the skills required to successfully apply for jobs. Each team member was
+            in charge of their predivided share of pages and functionalities. I was in charge of the <a
+              href="/images/php-manage-companies.png" target="_blank" style="text-decoration: underline;">Manage
+              Companies</a>,
+            <a href="/images/php-historical-data.png" target="_blank" style="text-decoration: underline;">Historical
+              Data</a>, <a href="/images/php-feedback-forms.png" _blank"
+              style="text-decoration: underline;"">Feedback Forms</a>, and the <a href=" images/php-help.png"
+              target="_blank" style="text-decoration: underline;">Help</a> pages.
           </p>
-          <a href="coming-soon.html">Learn More</a>
+          <a href=" https://github.com/itfactory-tm/2023-ProjectPHP-504?tab=readme-ov-file" target="_blank">GitHub
+            Repo</a>
+          <br>
+          <a href="https://jobtrainingapplication.ddpd.be/login" target="_blank">Application</a>
+          <br>
+          <a href="https://youtube.com/playlist?list=PLYknjsmTIdaAUoruPUjYgKjR3nVTQVnqa&si=XYXDa1n86gFCI3pc">In
+            Action</a>
         </div>
       </li>
       <li>
         <div class="project-card">
-          <h2>Tech For Dummies</h2>
+          <h2>Big Data: Image Classifier</h2>
+          <img src="images/big_data.png" alt="big data image classifier">
+          <p>
+            For this project, we trained an image classifier that predicts between big cats (jaguars, lions, snow
+            leopards, and
+            tigers). To train our AI model, we first built a web scraper, which we used to scrape images from Google to
+            build a
+            dataset. We then used this dataset to build our AI model, and used Streamlit to turn it into a web app. The
+            web
+            application allows you to upload an image of either of these big cats, and it will output a predicted class
+            and the
+            probability. We trained this model to try and beat Google's "Teachable Machine," in which we succeeded.
+          </p>
+          <a href="https://github.com/KyanoTrevisan/bigdata-project/tree/master" target="_blank">GitHub Repo</a>
+          <br>
+          <a href="https://raw.githubusercontent.com/KyanoTrevisan/bigdata-project/master/4.png" target="_blank">In
+            Action</a>
+        </div>
+      </li>
+      <li>
+        <div class="project-card">
+          <h2>Webdesign Advanced: Tech For Dummies</h2>
           <img src="images/gatb-for-dummies-project-2.png" alt="gatb for dummies project">
-          <p>For this project we made a website that offers clear and concise explanations of peripherals, with a focus on making complex
+          <p>For this project we made a website that offers clear and concise explanations of peripherals, with a focus
+            on making complex
             concepts easy to understand for anyone who is interested.
           </p>
-          <a href="https://gatbfordummies.netlify.app/">Learn More</a>
-        </div>
-      </li>
-      <li>
-        <div class="project-card">
-          <h2>Recalbox</h2>
-          <p>For this project I set up multiple emulators on a Raspberry Pi using Recalbox, allowing me to play a wide variety of classic video games on a single device.
-          </p>
-          <a href="https://www.youtube.com/watch?v=HhL79o6gTug">Learn More</a>
-        </div>
-      </li>
-      <li>
-        <div class="project-card">
-          <div class="carousel">
-            <input type="radio" name="carousel" id="image-1" checked />
-            <input type="radio" name="carousel" id="image-2" />
-            <input type="radio" name="carousel" id="image-3" />
-            <input type="radio" name="carousel" id="image-4" />
-        
-            <div class="carousel-slides">
-              <label for="image-4" class="prev"></label>
-              <label for="image-3" class="next"></label>
-        
-              <div class="slide">
-                <img src="images/project-image-1.jpg" alt="Project 1">
-              </div>
-              <div class="slide">
-                <img src="images/project-image-2.jpg" alt="Project 2">
-              </div>
-              <div class="slide">
-                <img src="images/project-image-3.jpg" alt="Project 3">
-              </div>
-              <div class="slide">
-                <img src="images/project-image-4.jpg" alt="Project 4">
-              </div>
-        
-              <label for="image-1" class="prev"></label>
-              <label for="image-2" class="next"></label>
-            </div>
-          </div>         
+          <a href="https://github.com/itfactory-tm/WebAdv-22-team-ACS-08" target="_blank">GitHub Repo</a>
+          <br>
+          <a href="https://gatbfordummies.netlify.app/" target="_blank">Application (down)</a>
         </div>
       </li>
     </ul>
