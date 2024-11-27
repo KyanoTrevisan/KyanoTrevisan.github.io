@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Game Automation - Kyano Trevisan</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>AI Game Automation System</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>TensorFlow</span>
+                        <span>OpenCV</span>
+                        <span>CNNs</span>
+                        <span>PyDirectInput</span>
+                        <span>MSS</span>
+                        <span>NumPy</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="project-overview">
+                <h2>Project Overview</h2>
+                <p>Developed a comprehensive AI system that automates gameplay in Trackmania using computer vision and deep learning. 
+                The project combines real-time screen analysis, machine learning prediction, and automated control inputs to create 
+                an AI capable of playing the game autonomously.</p>
+            </section>
+
+            <section class="project-demo">
+                <h2>Demo</h2>
+                <div class="video-container">
+                    <video controls width="100%">
+                        <source src="../videos/game-automation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="terminal-output">
+                    <pre><code>Predicted Label: up
+Predicted Label: up&right
+Predicted Label: up
+Predicted Label: up&left
+...</code></pre>
+                </div>
+            </section>
+
+            <section class="key-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>
+                        <h3>Real-time Screen Analysis</h3>
+                        <p>Utilizes OpenCV for processing game screen captures, including edge detection and line recognition for 
+                        understanding the track layout.</p>
+                    </li>
+                    <li>
+                        <h3>Machine Learning Model</h3>
+                        <p>Implements a CNN using TensorFlow for predicting optimal driving actions based on screen state.</p>
+                    </li>
+                    <li>
+                        <h3>Automated Control System</h3>
+                        <p>Uses PyDirectInput for precise game control, simulating keyboard inputs based on AI predictions.</p>
+                    </li>
+                    <li>
+                        <h3>Data Collection Pipeline</h3>
+                        <p>Custom data gathering system for recording gameplay and corresponding control inputs for model training.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="technical-details">
+                <h2>Technical Implementation</h2>
+                
+                <div class="implementation-phase">
+                    <h3>Screen Capture and Processing</h3>
+                    <p>The system captures a specific region of the game screen using MSS for efficiency. The captured images are 
+                    processed using OpenCV with the following pipeline:</p>
+                    <ul>
+                        <li>Conversion to grayscale</li>
+                        <li>Gaussian blur application</li>
+                        <li>Canny edge detection</li>
+                        <li>HoughLinesP algorithm for line detection</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>Data Collection</h3>
+                    <p>Created a sophisticated data collection system that:</p>
+                    <ul>
+                        <li>Captures screen states at regular intervals</li>
+                        <li>Records corresponding keyboard inputs</li>
+                        <li>Saves data in a structured format for training</li>
+                        <li>Implements CSV logging for maintaining data relationships</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>Model Architecture</h3>
+                    <p>Developed a CNN with the following structure:</p>
+                    <ul>
+                        <li>Input layer accepting 224x224x3 images</li>
+                        <li>Multiple convolutional and max pooling layers</li>
+                        <li>Dense layers for feature interpretation</li>
+                        <li>Output layer for three-class prediction (up, up&left, up&right)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="challenges">
+                <h2>Challenges & Solutions</h2>
+                <div class="challenge-item">
+                    <h3>Timing Precision</h3>
+                    <p>Challenge: Achieving precise timing for key inputs when simulating analog controls with digital inputs.</p>
+                    <p>Solution: Implemented fine-tuned timing system for key press durations, allowing for more nuanced control.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Input Simulation</h3>
+                    <p>Challenge: Initial issues with pyautogui not working effectively in the game environment.</p>
+                    <p>Solution: Switched to PyDirectInput, which provided more reliable and consistent input simulation.</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>📍 Heivinkenstraat 9, 3582 Koersel</p>
+            <p>📞 +324 72 01 283</p>
+            <p>📧 r0894962@student.thomasmore.be</p>
+            <p>🔗 <a href="https://kyanotrevisan.github.io">kyanotrevisan.github.io</a></p>
+        </div>
+    </footer>
+</body>
+</html>

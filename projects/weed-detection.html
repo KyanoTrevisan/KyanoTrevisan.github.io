@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Weed Detection System - Kyano Trevisan</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>AI-Powered Weed Detection System</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>YOLOv8</span>
+                        <span>Flask</span>
+                        <span>Rasterio</span>
+                        <span>GeoPandas</span>
+                        <span>Computer Vision</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="project-overview">
+                <h2>Project Overview</h2>
+                <p>A comprehensive system developed as part of a team project to help farmers monitor weed infestations in their fields. 
+                The project combines AI-powered detection with geospatial visualization, processing drone imagery to create interactive 
+                heatmaps for field analysis. My contribution focused on developing the AI detection system and coordinate transformation 
+                pipeline.</p>
+            </section>
+            
+            <section class="project-components">
+                <h2>Project Components</h2>
+                
+                <div class="component-card">
+                    <h3>1. AI Detection System</h3>
+                    <ul>
+                        <li>Custom YOLOv8 model for weed detection</li>
+                        <li>Processing of drone captured (GEO)TIF images</li>
+                        <li>Conversion of detection coordinates to geographical coordinates</li>
+                        <li>GeoJSON output generation for visualization</li>
+                    </ul>
+                </div>
+                
+                <div class="component-card">
+                    <h3>2. Coordinate Transformation</h3>
+                    <p>The system performs a crucial coordinate transformation process:</p>
+                    <ol>
+                        <li>YOLOv8 detects weeds and provides pixel coordinates (bounding boxes)</li>
+                        <li>Calculate center points of detection boxes</li>
+                        <li>Transform pixel coordinates to geographical coordinates using GeoTIF metadata</li>
+                        <li>Generate GeoJSON output for mapping integration</li>
+                    </ol>
+                </div>
+            
+                <div class="component-card">
+                    <h3>3. Team Integration</h3>
+                    <p>While I focused on the AI and coordinate transformation components, the complete project included:</p>
+                    <ul>
+                        <li>Web application development for field visualization</li>
+                        <li>Heatmap generation from detection data</li>
+                        <li>Field management interface</li>
+                        <li>Data storage and management system</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="technical-implementation">
+                <h2>Technical Implementation</h2>
+                
+                <div class="code-example">
+                    <h3>Detection and Coordinate Transformation</h3>
+                    <pre><code>def process_image(tmp_file_path, detection_model, datum, street, city, waypoint):
+                with rasterio.open(tmp_file_path) as geotiff:
+                    transform = geotiff.transform
+            
+                    with Image.open(tmp_file_path) as pil_image:
+                        result = get_prediction(tmp_file_path, detection_model)
+            
+                    geographic_coordinates_centers = []
+            
+                    for obj_pred in result.object_prediction_list:
+                        bbox = obj_pred.bbox.to_voc_bbox()
+                        # Calculate center point of detection
+                        center_x, center_y = (bbox[0] + bbox[2]) / 2, (bbox[1] + bbox[3]) / 2
+                        # Transform to geographical coordinates
+                        x_geo, y_geo = transform * (center_x, center_y)
+                        geographic_coordinates_centers.append([round(x_geo, 5), round(y_geo, 5)])</code></pre>
+                </div>
+            
+                <div class="code-example">
+                    <h3>Sample GeoJSON Output</h3>
+                    <pre><code>{
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "properties": {
+                        "name": "Knolcyperus",
+                        "date": "20230627",
+                        "waypoint": "2"
+                    },
+                    "geometry": {
+                        "type": "MultiPoint",
+                        "coordinates": [
+                            [5.053396971122078, 51.20157316214294],
+                            [5.053532485829646, 51.201603979029414]
+                        ]
+                    }
+                }]
+            }</code></pre>
+                </div>
+            </section>
+
+            <section class="feature">
+                <h2 class="feature-title">Web Application</h2>
+                <div class="feature-content">
+                    <div class="screenshot-container">
+                        <img src="../images/4-0-map.png" alt="heatmap">
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-workflow">
+                <h2>System Workflow</h2>
+                <div class="workflow-container">
+                    <div class="workflow-step">
+                        <h3>1. Data Input</h3>
+                        <ul>
+                            <li>Processes drone images in (GEO)TIF format</li>
+                            <li>Extracts geographical coordinates from metadata</li>
+                            <li>Handles batch processing of multiple images</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <h3>2. AI Detection</h3>
+                        <ul>
+                            <li>YOLOv8 model trained for specific weed detection</li>
+                            <li>GPU acceleration support for faster processing</li>
+                            <li>Confidence threshold optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <h3>3. Geospatial Processing</h3>
+                        <ul>
+                            <li>Conversion of pixel coordinates to geographical coordinates</li>
+                            <li>GeoJSON output generation</li>
+                            <li>Coordinate system transformations</li>
+                            <li>Spatial data aggregation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="technical-details">
+                <h2>Technical Implementation</h2>
+                
+                <div class="implementation-phase">
+                    <h3>RESTful API Development</h3>
+                    <ul>
+                        <li>Flask-based API for handling image uploads</li>
+                        <li>Batch processing capabilities</li>
+                        <li>Automated file naming and organization</li>
+                        <li>Error handling and validation</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>AI Model Integration</h3>
+                    <ul>
+                        <li>Custom YOLOv8 model implementation</li>
+                        <li>Optimized confidence thresholds</li>
+                        <li>GPU acceleration support</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>Geospatial Data Processing</h3>
+                    <ul>
+                        <li>Coordinate transformation system</li>
+                        <li>GeoJSON feature generation</li>
+                        <li>Metadata extraction and processing</li>
+                        <li>Spatial data aggregation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="key-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>
+                        <h3>Automated Detection</h3>
+                        <p>AI-powered system automatically identifies and localizes target species in drone imagery.</p>
+                    </li>
+                    <li>
+                        <h3>Geospatial Integration</h3>
+                        <p>Seamless conversion between image coordinates and real-world geographical coordinates.</p>
+                    </li>
+                    <li>
+                        <h3>Batch Processing</h3>
+                        <p>Efficient handling of multiple images with automated file organization and processing.</p>
+                    </li>
+                    <li>
+                        <h3>Data Visualization</h3>
+                        <p>GeoJSON output for easy integration with mapping and visualization tools.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="implementation-highlights">
+                <h2>Implementation Highlights</h2>
+                <p>Core function for converting detection coordinates to geographical coordinates</p>
+                <div class="code-example">
+                    <pre><code>def process_predictions(result, transform):
+    geographic_coordinates_centers = []
+    
+    for obj_pred in result.object_prediction_list:
+        bbox = obj_pred.bbox.to_voc_bbox()
+        center_x, center_y = (bbox[0] + bbox[2]) / 2, (bbox[1] + bbox[3]) / 2
+        x_geo, y_geo = transform * (center_x, center_y)
+        geographic_coordinates_centers.append([x_geo, y_geo])
+
+    return geographic_coordinates_centers</code></pre>
+                </div>
+            </section>
+
+            <section class="technical-challenges">
+                <h2>Technical Challenges & Solutions</h2>
+                <div class="challenge-item">
+                    <h3>Coordinate Transformation</h3>
+                    <p>Challenge: Accurate conversion between pixel and geographical coordinates</p>
+                    <p>Solution: Developed robust transformation system using Rasterio and GeoPandas</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>📍 Heivinkenstraat 9, 3582 Koersel</p>
+            <p>📞 +324 72 01 283</p>
+            <p>📧 r0894962@student.thomasmore.be</p>
+            <p>🔗 <a href="https://kyanotrevisan.github.io">kyanotrevisan.github.io</a></p>
+        </div>
+    </footer>
+</body>
+</html>

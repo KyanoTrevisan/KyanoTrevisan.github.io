@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Cat Species Classifier - Kyano Trevisan</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>Big Cat Species Classifier</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>Fastai</span>
+                        <span>PyTorch</span>
+                        <span>Streamlit</span>
+                        <span>Python</span>
+                        <span>Transfer Learning</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="project-overview">
+                <h2>Project Overview</h2>
+                <p>An implementation of an image classifier designed to identify five different big cat species: Jaguars, Lions, 
+                Snow Leopards, Leopards, and Tigers. Using deep learning techniques, the classifier achieves high accuracy in 
+                distinguishing between these similar-looking species.</p>
+            </section>
+
+            <section class="feature">
+                <h2 class="feature-title">Interactive Interface</h2>
+                <div class="feature-content">
+                    <div class="screenshot-container">
+                        <img src="../images/bigcat-upload.png" alt="Interactive interface demonstration">
+                    </div>
+                    <p class="feature-description">
+                        Users can upload images through a simple drag-and-drop interface and receive instant predictions with confidence scores.
+                    </p>
+                    <div class="screenshot-container">
+                        <img src="../images/bigcat-prediction.png" alt="Interactive interface demonstration">
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature">
+                <h2 class="feature-title">Exploratory Data Analysis</h2>
+                <div class="feature-content">
+                    <div class="screenshot-container">
+                        <img src="../images/bigcat-eda.png" alt="Exploratory Data Analysis view">
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature">
+                <h2 class="feature-title">Dataset Distribution</h2>
+                <div class="feature-content">
+                    <div class="dataset-list">
+                        <div class="dataset-item">
+                            <span>jaguar (panthera onca):</span>
+                            <span>300 images</span>
+                        </div>
+                        <div class="dataset-item">
+                            <span>leopard (panthera pardus):</span>
+                            <span>300 images</span>
+                        </div>
+                        <div class="dataset-item">
+                            <span>lion (panthera leo):</span>
+                            <span>240 images</span>
+                        </div>
+                        <div class="dataset-item">
+                            <span>snow leopard (panthera uncia):</span>
+                            <span>300 images</span>
+                        </div>
+                        <div class="dataset-item">
+                            <span>tiger (panthera tigris):</span>
+                            <span>300 images</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="technical-details">
+                <h2>Technical Implementation</h2>
+                
+                <div class="implementation-phase">
+                    <h3>Data Collection & Processing</h3>
+                    <ul>
+                        <li>Custom web scraping script for image collection</li>
+                        <li>Automated data cleaning and organization</li>
+                        <li>Image preprocessing and augmentation pipeline</li>
+                        <li>Balanced dataset creation (~300 images per class)</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>Model Development</h3>
+                    <ul>
+                        <li>Transfer learning using pre-trained CNN</li>
+                        <li>Fine-tuning on big cat dataset</li>
+                        <li>High accuracy predictions (100% on test sample shown)</li>
+                        <li>Real-time prediction capability</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>User Interface Features</h3>
+                    <ul>
+                        <li>Drag-and-drop file upload</li>
+                        <li>Support for JPG, JPEG, PNG formats</li>
+                        <li>200MB file size limit per image</li>
+                        <li>EDA button for dataset exploration</li>
+                        <li>Clear prediction display with confidence scores</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="technical-note">
+                <h2>Technical Note</h2>
+                <div class="note-content">
+                    <p>The Streamlit application couldn't be hosted on cloud services due to Pathlib compatibility issues 
+                    between Windows and Linux environments. Local demonstration screenshots are available to showcase the 
+                    application's functionality.</p>
+                </div>
+            </section>
+
+            <section class="project-links">
+                <h2>Project Resources</h2>
+                <div class="links-container">
+                    <a href="https://github.com/KyanoTrevisan/bigdata-project/tree/master" class="project-button" target="_blank">
+                        View on GitHub
+                    </a>
+                    <a href="https://raw.githubusercontent.com/KyanoTrevisan/bigdata-project/master/4.png" class="project-button" target="_blank">
+                        View Demo Screenshots
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>📍 Heivinkenstraat 9, 3582 Koersel</p>
+            <p>📞 +324 72 01 283</p>
+            <p>📧 r0894962@student.thomasmore.be</p>
+            <p>🔗 <a href="https://kyanotrevisan.github.io">kyanotrevisan.github.io</a></p>
+        </div>
+    </footer>
+</body>
+</html>

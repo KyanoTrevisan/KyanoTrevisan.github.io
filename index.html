@@ -1,32 +1,76 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>Homepage</title>
-	<link rel="stylesheet" href="style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyano Trevisan - Portfolio</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
-
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About Me</a></li>
-				<li><a href="projects.html">Projects/Accomplishments</a></li>
-			</ul>
-		</nav>
-	</header>
-	<section class="home">
-		<h1 class="typing-animation">Welcome to my Portfolio</h1>
-		<p>Hello, my name is Kyano Trevisan, and I am a computer science student. I have a strong interest in exploring
-			innovative technologies and applying them to real-world problems through software development.</p>
-		<a href="about.html" class="about-button">Next</a>
-	</section>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="home">
+        <section class="hero-section">
+            <h1>Kyano Trevisan</h1>
+            <h2>Applied Computer Science: Artificial Intelligence</h2>
+            
+            <div class="intro-text">
+                <p>I am a passionate third-year student pursuing a Bachelor's degree in Applied Computer Science with a 
+                specialization in Artificial Intelligence. With extensive experience in AI/ML technologies and data processing, 
+                I am dedicated to developing innovative AI solutions that deliver real business value.</p>
+            </div>
 
+            <div class="skills-overview">
+                <div class="skills-group">
+                    <h3>AI & Machine Learning</h3>
+                    <ul>
+                        <li>Deep Learning: TensorFlow, PyTorch, Fastai</li>
+                        <li>Computer Vision: OpenCV, YOLOv8</li>
+                        <li>NLP: spaCy, NLTK, BERT</li>
+                    </ul>
+                </div>
 
-	<script src="scripts/typing-animation.js"></script>
+                <div class="skills-group">
+                    <h3>Data Engineering</h3>
+                    <ul>
+                        <li>API Development: FastAPI, Flask</li>
+                        <li>Data Analysis: pandas, numpy, Seaborn</li>
+                        <li>Visualization: Plotly, Streamlit</li>
+                    </ul>
+                </div>
 
+                <div class="skills-group">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Languages: Python, Java, JavaScript</li>
+                        <li>Frameworks: Laravel, Vue.js</li>
+                        <li>DevOps: Docker, Kubernetes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="about.html" class="about-button">Learn More</a>
+                <a href="projects.html" class="about-button">View Projects</a>
+                <a href="Kyano-Trevisan-CV.pdf" class="about-button" download="CV_KyanoTrevisan">Download CV</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>📍 Heivinkenstraat 9, 3582 Koersel</p>
+            <p>📞 +324 72 01 283</p>
+            <p>📧 r0894962@student.thomasmore.be</p>
+        </div>
+    </footer>
 </body>
-
 </html>
