@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxic Comments Classifier - Portfolio</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>Toxic Comments Classifier</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>PyTorch</span>
+                        <span>DistilBERT</span>
+                        <span>NLP</span>
+                        <span>Transformers</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="project-overview">
+                <h2>Project Overview</h2>
+                <p>An NLP-based system that automatically detects and classifies toxic comments in online content. Built using DistilBERT, a lightweight transformer model, the system efficiently processes and classifies text while maintaining high accuracy. The project demonstrates the practical application of transformer models in content moderation.</p>
+            </section>
+
+            <section class="feature">
+                <h2 class="feature-title">Training Performance</h2>
+                <div class="feature-content">
+                    <div class="screenshot-container">
+                        <img src="../images/toxic-training-loss.png" alt="Training loss visualization">
+                    </div>
+                    <p class="feature-description">
+                        Model training showed consistent improvement, with the loss decreasing from 0.41 to 0.12. The implemented cosine learning rate schedule helped optimize convergence while preventing overfitting.
+                    </p>
+                </div>
+            </section>
+
+            <section class="technical-details">
+                <h2>Technical Implementation</h2>
+                
+                <div class="implementation-phase">
+                    <h3>Model Architecture</h3>
+                    <ul>
+                        <li>DistilBERT-based sequence classification</li>
+                        <li>Mixed-precision training support</li>
+                        <li>Dynamic input padding</li>
+                        <li>Optimized tokenizer implementation</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>Training Pipeline</h3>
+                    <ul>
+                        <li>Dataset balancing for improved performance</li>
+                        <li>Cosine learning rate schedule</li>
+                        <li>Weight decay for regularization</li>
+                        <li>Custom metrics computation</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>Deployment Features</h3>
+                    <ul>
+                        <li>GPU acceleration support</li>
+                        <li>Efficient batch processing</li>
+                        <li>Memory optimization</li>
+                        <li>Real-time inference capabilities</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="code-examples">
+                <h2>Implementation Examples</h2>
+                
+                <div class="code-example">
+                    <h3>Model Training Configuration</h3>
+                    <pre><code>training_args = TrainingArguments(
+    output_dir="./results",
+    learning_rate=2e-5,
+    warmup_ratio=0.1,
+    lr_scheduler_type="cosine",
+    fp16=True,
+    num_train_epochs=2,
+    weight_decay=0.01
+)</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Inference Pipeline</h3>
+                    <pre><code>def predict_toxicity(text, model, tokenizer):
+    inputs = tokenizer(text, return_tensors="pt", truncation=True)
+    with torch.no_grad():
+        logits = model(**inputs).logits
+    predicted_class = logits.argmax().item()
+    return model.config.id2label[predicted_class]</code></pre>
+                </div>
+            </section>
+
+            <section class="project-links">
+                <h2>Project Resources</h2>
+                <div class="links-container">
+                    <a href="https://github.com/KyanoTrevisan/bigdata-project/tree/master" class="project-button">GitHub Repository</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
