@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrivacyMatters Blog - Portfolio</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -25,121 +27,117 @@
                     <div class="tech-stack">
                         <span>Laravel</span>
                         <span>Livewire</span>
-                        <span>PHP</span>
-                        <span>MySQL</span>
+                        <span>Alpine.js</span>
                         <span>TailwindCSS</span>
+                        <span>NGINX</span>
+                        <span>SQLite</span>
                     </div>
                 </div>
             </header>
 
-            <section class="project-overview">
-                <h2>Project Overview</h2>
-                <p>A specialized blogging platform focused on privacy, security, and digital rights. The platform enables users to create, share, and discuss content related to online privacy, encryption, cybersecurity, and digital freedom. Built with Laravel and Livewire, it features real-time updates, markdown support, and enhanced security features.</p>
+            <section class="feature">
+                <h2 class="feature-title">Project Overview</h2>
+                <div class="feature-content">
+                    <p class="feature-description">PrivacyMatters Blog addresses the growing need for accessible,
+                        community-driven information about online privacy and digital security. In an era of increasing
+                        digital surveillance and data breaches, this platform serves as both an educational resource and
+                        a community space where users can share knowledge and experiences about privacy-related topics.
+                    </p>
+                    <div class="screenshot-container">
+                        <img src="../images/privacymatters-home.png" alt="PrivacyMatters Blog homepage">
+                        <h4>Light Mode</h4>
+                    </div>
+                    <div class="screenshot-container">
+                        <img src="../images/privacymatters-home-dark.png" alt="PrivacyMatters Blog homepage">
+                        <h4>Dark Mode</h4>
+                    </div>
+                </div>
             </section>
 
             <section class="feature">
-                <h2 class="feature-title">Main Blog Interface</h2>
-                <div class="feature-content">
-                    <div class="screenshot-container">
-                        <img src="../images/privacymatters-blog.png" alt="PrivacyMatters blog interface">
-                    </div>
-                    <p class="feature-description">
-                        Clean, user-friendly interface featuring dynamic content loading, article previews, and categorized content organization. Built with accessibility and readability in mind.
-                    </p>
-                </div>
-            </section>
-
-            <section class="technical-details">
-                <h2>Technical Implementation</h2>
-                
+                <h2 class="feature-title">Key Features</h2>
                 <div class="implementation-phase">
-                    <h3>Core Features</h3>
                     <ul>
-                        <li>Role-based access control (Admin/User roles)</li>
-                        <li>Laravel authentication system with enhanced security</li>
-                        <li>Real-time comment system using Livewire</li>
-                        <li>Markdown support for content creation</li>
-                        <li>PGP public key integration for secure communication</li>
-                    </ul>
-                </div>
-
-                <div class="implementation-phase">
-                    <h3>Advanced Functionality</h3>
-                    <ul>
-                        <li>Dynamic page updates without full reloads</li>
-                        <li>Advanced search and filtering system</li>
-                        <li>Content moderation tools for administrators</li>
-                        <li>Category and tag management system</li>
-                    </ul>
-                </div>
-
-                <div class="implementation-phase">
-                    <h3>Privacy Features</h3>
-                    <ul>
-                        <li>Secure user authentication system</li>
-                        <li>PGP key management for users</li>
-                        <li>Privacy-focused content sharing</li>
-                        <li>Enhanced security measures for user data protection</li>
-                    </ul>
-                </div>
-
-                <div class="implementation-phase">
-                    <h3>Production Infrastructure</h3>
-                    <ul>
-                        <li>Self-hosted on personal home server</li>
-                        <li>PHP-FPM for optimized PHP processing</li>
-                        <li>Nginx web server with hardened security configuration</li>
-                        <li>Custom server security implementations</li>
-                    </ul>
-                </div>
-                
-                <div class="implementation-phase">
-                    <h3>Security Best Practices</h3>
-                    <ul>
-                        <li>Hardened Nginx configuration</li>
-                        <li>Secure HTTP headers implementation</li>
-                        <li>SSL/TLS optimization</li>
-                        <li>Server-side security measures</li>
-                        <li>Regular security audits and updates</li>
+                        <li>Privacy-focused blogging platform with markdown support</li>
+                        <li>Comprehensive resource library for privacy tools and services</li>
+                        <li>Interactive glossary of privacy and security terms</li>
+                        <li>Community engagement through comments and discussions</li>
+                        <li>Role-based access control (Admin/User)</li>
+                        <li>Advanced search and filtering capabilities</li>
+                        <li>Privacy-enhanced user profiles with PGP key support</li>
+                        <li>Category and tag-based content organization</li>
+                        <li>Content moderation system</li>
                     </ul>
                 </div>
             </section>
 
             <section class="feature">
-                <h2 class="feature-title">Content Management</h2>
-                <div class="feature-content">
-                    <div class="screenshot-container">
-                        <video controls width="100%">
-                            <source src="../videos/privacymatters-content-management.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <p class="feature-description">
-                        Intuitive content creation interface with markdown support, tag management, and real-time preview functionality.
-                    </p>
+                <h2 class="feature-title">Technical Implementation</h2>
+                <div class="implementation-phase">
+                    <h3>Database Structure</h3>
+                    <ul>
+                        <li>Posts: Belongs to User, has many Comments, belongs to Category, belongs to many Tags</li>
+                        <li>Users: Has many Posts and Comments</li>
+                        <li>Resources: Belongs to User, has many Files, belongs to Category, belongs to many Tags</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>Interactive Components</h3>
+                    <ul>
+                        <li>Theme Switcher: Dynamic dark/light mode switching</li>
+                        <li>Modal Dialog: Content moderation interface for admins</li>
+                        <li>File-drop Upload: Drag-and-drop file upload system</li>
+                        <li>Markdown Editor: GitHub-flavored markdown with helper</li>
+                        <li>Comments System: Real-time comment updates</li>
+                    </ul>
                 </div>
             </section>
 
             <section class="feature">
-                <h2 class="feature-title">Community Features</h2>
-                <div class="feature-content">
-                    <div class="screenshot-container">
-                        <img src="../images/privacymatters-comments.png" alt="Community discussion interface">
-                    </div>
-                    <p class="feature-description">
-                        Real-time commenting system and community engagement features powered by Livewire, enabling dynamic discussions without page refreshes.
-                    </p>
+                <h2 class="feature-title">Privacy & Security Features</h2>
+                <div class="implementation-phase">
+                    <ul>
+                        <li>PGP public key storage for secure user communication</li>
+                        <li>Production-ready NGINX configuration with security headers</li>
+                        <li>Zero Trust Cloudflare Tunnel for enhanced security</li>
+                        <li>Sophisticated role-based access control system</li>
+                        <li>Latest PHP version with PHP-FPM</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="feature">
+                <h2 class="feature-title">Project Reflection</h2>
+                <div class="challenge-item">
+                    <h3>Achievements</h3>
+                    <ul>
+                        <li>Successfully implemented core TALL stack features</li>
+                        <li>Created robust authentication and authorization system</li>
+                        <li>Developed intuitive UI with theme support</li>
+                        <li>Implemented advanced features like drag-and-drop ordering</li>
+                    </ul>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Future Improvements</h3>
+                    <ul>
+                        <li>Implement more comprehensive test coverage</li>
+                        <li>Use more Form Objects for better code organization</li>
+                        <li>Implement more real-time features using Laravel Echo</li>
+                        <li>Focus more on mobile-first development approach</li>
+                    </ul>
                 </div>
             </section>
 
             <section class="project-links">
                 <h2>Project Resources</h2>
                 <div class="links-container">
-                    <a href="https://privacymatters.cc" class="project-button" target="_blank">Live Site</a>
-                    <a href="#" class="project-button" target="_blank">GitHub Repository</a>
+                    <a href="https://privacymatters.cc" class="project-button" target="_blank">Live Demo</a>
                 </div>
             </section>
         </article>
     </main>
 </body>
+
 </html>
