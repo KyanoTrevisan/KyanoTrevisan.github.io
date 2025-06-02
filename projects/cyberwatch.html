@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberWatch - FOSS Threat Intelligence Platform</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>CyberWatch - Threat Intelligence</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Ollama</span>
+                        <span>Telethon</span>
+                        <span>SQLite</span>
+                        <span>BeautifulSoup</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="project-overview">
+                <h2>Project Overview</h2>
+                <p>A comprehensive, open-source threat intelligence platform designed for monitoring cybercrime communities, forums, and marketplaces across both the clear and dark web. Built with privacy and security in mind, CyberWatch uses local AI models for threat analysis without sending data to external services, making it perfect for security research and SOC operations.</p>
+            </section>
+
+            <section class="feature">
+                <h2 class="feature-title">Real-time Telegram Monitoring</h2>
+                <div class="feature-content">
+                    <div class="screenshot-container">
+                        <img src="../images/cyberwatch-dashboard.png" alt="CyberWatch Dashboard">
+                    </div>
+                    <p class="feature-description">
+                        Monitors 200+ threat intelligence channels, including major threat actor groups, exploit databases, and security research communities.
+                    </p>
+                </div>
+            </section>
+
+            <section class="feature">
+                <h2 class="feature-title">AI-Powered Threat Analysis</h2>
+                <div class="feature-content">
+                    <div class="screenshot-container">
+                        <img src="../images/cyberwatch-ai-analysis.png" alt="AI Threat Analysis">
+                    </div>
+                    <p class="feature-description">
+                        Integrates Ollama with llama3.2:3b model for complete privacy-focused AI analysis. Automatically generates professional threat summaries, extracts IoCs (IPs, domains, hashes), and provides confidence scoring for threat prioritization.
+                    </p>
+                </div>
+            </section>
+
+            <section class="feature">
+                <h2 class="feature-title">Automated Threat Intelligence Feed</h2>
+                <div class="feature-content">
+                    <div class="screenshot-container">
+                        <img src="../images/cyberwatch-posting.png" alt="Automated Posting">
+                    </div>
+                    <p class="feature-description">
+                        Automatically posts AI-generated threat summaries to Telegram channels, creating a professional threat intelligence feed. Features smart filtering, rate limiting, and confidence-based posting to prevent spam while ensuring high-quality intelligence sharing.
+                    </p>
+                </div>
+            </section>
+
+            <section class="technical-details">
+                <h2>Technical Implementation</h2>
+                
+                <div class="implementation-phase">
+                    <h3>Backend Architecture</h3>
+                    <ul>
+                        <li>FastAPI framework with async/await for high-performance concurrent scanning</li>
+                        <li>SQLite database with threat correlation and posting logs</li>
+                        <li>Telethon for Telegram API integration and real-time monitoring</li>
+                        <li>Ollama integration for local AI processing without external dependencies</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>AI & Machine Learning</h3>
+                    <ul>
+                        <li>Local llama3.2:3b model integration for threat classification</li>
+                        <li>Automatic IoC extraction using regex patterns and AI analysis</li>
+                        <li>Confidence scoring system combining keyword matching and AI assessment</li>
+                        <li>Privacy-focused processing - no data sent to external services</li>
+                    </ul>
+                </div>
+
+            <section class="key-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>
+                        <h3>Real-time Monitoring</h3>
+                        <p>24/7 automated scanning of threat intelligence sources with configurable scan intervals and keyword-based filtering.</p>
+                    </li>
+                    <li>
+                        <h3>Privacy-First AI</h3>
+                        <p>Local Ollama AI processing ensures no sensitive threat data leaves your infrastructure while providing enterprise-grade analysis.</p>
+                    </li>
+                    <li>
+                        <h3>Automated Intelligence Feed</h3>
+                        <p>AI-generated professional threat summaries automatically posted to your Telegram channel for team consumption.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="challenges">
+                <h2>Challenges & Solutions</h2>
+                <div class="challenge-item">
+                    <h3>Scale & Performance</h3>
+                    <p>Challenge: Efficiently monitoring 200+ sources without overwhelming APIs or system resources.</p>
+                    <p>Solution: Implemented intelligent rate limiting, concurrent processing with asyncio, and smart filtering to process only relevant content.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>AI Integration & Privacy</h3>
+                    <p>Challenge: Providing threat analysis while maintaining complete data privacy.</p>
+                    <p>Solution: Integrated Ollama for local AI processing, ensuring no threat intelligence data is sent to external services.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Data Quality & Noise Reduction</h3>
+                    <p>Challenge: Filtering high-quality threats from massive amounts of social media noise and false positives.</p>
+                    <p>Solution: Developed multi-layered filtering using keyword matching, AI confidence scoring, and threat level classification.</p>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
