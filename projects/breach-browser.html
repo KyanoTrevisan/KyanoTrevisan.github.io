@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breach Browser - Kyano Trevisan</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../internship.html">Internship</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>Breach Browser</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Elasticsearch</span>
+                        <span>Flask</span>
+                        <span>Docker</span>
+                        <span>Full-Text Search</span>
+                        <span>Web Interface</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="implementation-phase">
+                <h2>Project Overview</h2>
+                <p>Breach Browser is a fast and efficient full-text search engine designed for large text datasets with a clean web interface. Built with Python, Elasticsearch, and Flask, it provides researchers and analysts with powerful search capabilities across massive document collections.</p>
+                <p>The application excels at processing and indexing large volumes of text data, making it ideal for investigating data breaches, analyzing document dumps, or searching through extensive text archives. It features advanced query syntax, progressive loading, and efficient chunking mechanisms.</p>
+                
+                <div class="image-container">
+                    <img src="../images/breach-browser.png" alt="Breach Browser search interface">
+                </div>
+            </section>
+
+            <section class="key-features">
+                <h2>Core Features</h2>
+                <ul>
+                    <li>
+                        <h3>Full-Text Search</h3>
+                        <p>Advanced query syntax supporting Boolean operations, phrase matching, wildcard searches, and fuzzy matching for comprehensive text analysis.</p>
+                    </li>
+                    <li>
+                        <h3>Efficient Chunking</h3>
+                        <p>Intelligent processing of large files with configurable chunk sizes for optimal memory usage and search performance.</p>
+                    </li>
+                    <li>
+                        <h3>Progressive Loading</h3>
+                        <p>Faster search results through progressive loading and efficient indexing with resume capabilities for interrupted operations.</p>
+                    </li>
+                    <li>
+                        <h3>Detailed Results</h3>
+                        <p>Comprehensive search results with file metadata, context highlighting, and source attribution for accurate analysis.</p>
+                    </li>
+                    <li>
+                        <h3>Real-time Statistics</h3>
+                        <p>Live indexing progress tracking and search statistics for monitoring performance and data processing status.</p>
+                    </li>
+                    <li>
+                        <h3>Resume-Capable Indexing</h3>
+                        <p>Robust indexing system that can resume interrupted processes, preventing data loss and optimizing processing time.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Search Capabilities</h2>
+                <h3>Advanced Query Syntax</h3>
+                <ul>
+                    <li><strong>Boolean Operations:</strong> Use AND, OR, NOT operators for complex search logic</li>
+                    <li><strong>Phrase Matching:</strong> Exact phrase searches with quotation marks</li>
+                    <li><strong>Wildcard Search:</strong> Pattern matching with asterisk (*) for partial terms</li>
+                    <li><strong>Fuzzy Search:</strong> Similarity matching with tilde (~) for typo tolerance</li>
+                    <li><strong>Field-Specific:</strong> Target specific document fields for precise searches</li>
+                    <li><strong>Range Queries:</strong> Date and numeric range searching capabilities</li>
+                </ul>
+
+                <h3>Search Examples</h3>
+                <ul>
+                    <li><code>term1 AND term2</code> - Find documents containing both terms</li>
+                    <li><code>"exact phrase"</code> - Find exact phrase matches</li>
+                    <li><code>test*</code> - Find words starting with "test"</li>
+                    <li><code>term~</code> - Find similar terms (fuzzy search)</li>
+                    <li><code>term1 OR term2</code> - Find documents with either term</li>
+                    <li><code>NOT term</code> - Exclude documents with this term</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Technical Architecture</h2>
+                <h3>Backend Components</h3>
+                <ul>
+                    <li><strong>Elasticsearch Engine:</strong> High-performance search and analytics engine for full-text indexing</li>
+                    <li><strong>Flask Web Server:</strong> Lightweight Python web framework handling HTTP requests and responses</li>
+                    <li><strong>Document Processor:</strong> Intelligent text chunking and metadata extraction system</li>
+                    <li><strong>Indexing Manager:</strong> Batch processing with progress tracking and resume capabilities</li>
+                    <li><strong>Query Parser:</strong> Advanced query syntax processing and optimization</li>
+                </ul>
+
+                <h3>Performance Features</h3>
+                <ul>
+                    <li><strong>Chunked Processing:</strong> 500KB default chunk size for optimal memory usage</li>
+                    <li><strong>Batch Indexing:</strong> Configurable batch sizes (default: 5 documents) for efficient processing</li>
+                    <li><strong>Memory Management:</strong> Optimized for large datasets requiring substantial RAM</li>
+                    <li><strong>Concurrent Operations:</strong> Multi-threaded processing for improved performance</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Installation & Setup</h2>
+                <h3>System Requirements</h3>
+                <ul>
+                    <li>Python 3.8+ for application runtime</li>
+                    <li>Docker for Elasticsearch container management</li>
+                    <li>Sufficient storage space for datasets and search indices</li>
+                    <li>Substantial RAM for large dataset processing (2GB+ recommended)</li>
+                </ul>
+
+                <h3>Docker Configuration</h3>
+                <ul>
+                    <li>Elasticsearch 7.17.9 with optimized Java heap settings</li>
+                    <li>Persistent data volumes for index storage</li>
+                    <li>Configured memory limits and file descriptor settings</li>
+                    <li>Security disabled for local development (configurable for production)</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Configuration Options</h2>
+                <h3>Customizable Parameters</h3>
+                <ul>
+                    <li><strong>Chunk Size:</strong> Text processing chunk size (default: 500KB)</li>
+                    <li><strong>Batch Size:</strong> Number of documents per indexing batch (default: 5)</li>
+                    <li><strong>Port Configuration:</strong> Web interface port (default: 5000)</li>
+                    <li><strong>Index Name:</strong> Elasticsearch index identifier (default: text_documents)</li>
+                    <li><strong>Data Directory:</strong> Source file location (default: ./data)</li>
+                </ul>
+
+                <h3>Performance Tuning</h3>
+                <ul>
+                    <li>Adjustable chunk sizes for different file types and sizes</li>
+                    <li>Configurable batch processing for optimal throughput</li>
+                    <li>Memory allocation settings for Elasticsearch optimization</li>
+                    <li>Index refresh intervals for real-time vs. batch processing</li>
+                </ul>
+            </section>
+
+            <section class="challenges">
+                <h2>Development Challenges & Solutions</h2>
+                <div class="challenge-item">
+                    <h3>Large Dataset Processing</h3>
+                    <p>Challenge: Efficiently processing and indexing massive text datasets without overwhelming system resources.</p>
+                    <p>Solution: Implemented intelligent chunking with configurable sizes and batch processing with progress tracking to handle large files systematically.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Search Performance Optimization</h3>
+                    <p>Challenge: Delivering fast search results across large indexed datasets while maintaining relevance and accuracy.</p>
+                    <p>Solution: Leveraged Elasticsearch's advanced indexing and query optimization features with custom tuning for text-heavy datasets.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Resumable Operations</h3>
+                    <p>Challenge: Handling interrupted indexing processes for large datasets that may take hours to complete.</p>
+                    <p>Solution: Built resume-capable indexing with progress persistence, allowing operations to continue from interruption points.</p>
+                </div>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Security Considerations</h2>
+                <h3>Local Development</h3>
+                <ul>
+                    <li>Designed for local use with security features disabled by default</li>
+                    <li>No external network exposure in standard configuration</li>
+                    <li>Local file system access only within designated data directories</li>
+                </ul>
+
+                <h3>Production Deployment</h3>
+                <ul>
+                    <li>Enable Elasticsearch security features for production environments</li>
+                    <li>Configure proper authentication and authorization mechanisms</li>
+                    <li>Implement HTTPS for web interface security</li>
+                    <li>Restrict network access and implement firewall rules</li>
+                    <li>Regular security updates and monitoring</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Use Cases & Applications</h2>
+                <h3>Research Applications</h3>
+                <ul>
+                    <li>Data breach analysis and investigation</li>
+                    <li>Digital forensics and incident response</li>
+                    <li>Academic research on large text corpora</li>
+                    <li>Journalism and investigative reporting</li>
+                    <li>Legal document review and discovery</li>
+                </ul>
+
+                <h3>Technical Applications</h3>
+                <ul>
+                    <li>Log file analysis and system monitoring</li>
+                    <li>Code repository searching and analysis</li>
+                    <li>Documentation and knowledge base management</li>
+                    <li>Content analysis and text mining projects</li>
+                </ul>
+            </section>
+
+            <section class="project-links">
+                <h2>Project Resources</h2>
+                <div class="links-container">
+                    <a href="https://github.com/sooox-cc/breach-browser" target="_blank" class="project-button">View on GitHub</a>
+                    <a href="../projects.html" class="project-button">Back to Projects</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

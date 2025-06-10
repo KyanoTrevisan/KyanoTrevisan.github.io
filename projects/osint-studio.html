@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Studio - Kyano Trevisan</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../internship.html">Internship</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>OSINT Studio</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>Rust</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Tauri 2.0</span>
+                        <span>Cytoscape.js</span>
+                        <span>Desktop App</span>
+                        <span>Graph Visualization</span>
+                        <span>OSINT</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="implementation-phase">
+                <h2>Project Overview</h2>
+                <p>OSINT Studio is an open-source desktop application designed for Open Source Intelligence (OSINT) investigations. Built with Rust and React using the Tauri 2.0 framework, it provides intelligence analysts and researchers with a comprehensive tool for visualizing relationships, tracking entities, and generating investigation reports.</p>
+                <p>The project was created to address the lack of quality Free and Open Source Software (FOSS) alternatives in the OSINT space, providing a professional-grade tool that respects user privacy and data sovereignty.</p>
+                
+                <div class="image-container">
+                    <img src="../images/osint-studio.png" alt="OSINT Studio main interface">
+                </div>
+            </section>
+
+            <section class="key-features">
+                <h2>Core Features</h2>
+                <ul>
+                    <li>
+                        <h3>Interactive Graph Visualization</h3>
+                        <p>Advanced drag-and-drop interface with multiple layout algorithms for relationship analysis.</p>
+                    </li>
+                    <li>
+                        <h3>Multi-Entity Support</h3>
+                        <p>Track people, organizations, cryptocurrency wallets, social accounts, domains, and more.</p>
+                    </li>
+                    <li>
+                        <h3>Confidence-Based Relationships</h3>
+                        <p>Color-coded arrows with percentage scores and source attribution for reliability tracking.</p>
+                    </li>
+                    <li>
+                        <h3>Advanced Search</h3>
+                        <p>Full-text search across all entities and metadata for quick information retrieval.</p>
+                    </li>
+                    <li>
+                        <h3>Rich Metadata</h3>
+                        <p>Attach descriptions, tags, confidence scores, and investigative notes to all entities.</p>
+                    </li>
+                    <li>
+                        <h3>Automated Reporting</h3>
+                        <p>Generate professional investigation reports with multiple templates and formats.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Graph Layout Algorithms</h2>
+                <p>OSINT Studio supports multiple graph layout algorithms to help visualize relationships in different ways, allowing analysts to discover patterns and connections more effectively.</p>
+                
+                <div class="demo-screenshots">
+                    <div class="image-container">
+                        <img src="../images/osint-studio-circlLayout.png" alt="Circle layout showing entities arranged in a circular pattern">
+                        <h4 style="color: var(--antiflash-white); text-align: center; margin-top: 1rem;">Circle Layout</h4>
+                        <p style="color: var(--antiflash-white);">Arranges entities in a circular pattern, useful for showing equal relationships between all nodes.</p>
+                    </div>
+                    
+                    <div class="image-container">
+                        <img src="../images/osint-studio-forceDirectedLayout.png" alt="Force-directed layout showing natural clustering">
+                        <h4 style="color: var(--antiflash-white); text-align: center; margin-top: 1rem;">Force-Directed Layout</h4>
+                        <p style="color: var(--antiflash-white);">Uses physics simulation to naturally cluster related entities and separate unrelated ones.</p>
+                    </div>
+                    
+                    <div class="image-container">
+                        <img src="../images/osint-studio-gridLayout.png" alt="Grid layout showing organized entity placement">
+                        <h4 style="color: var(--antiflash-white); text-align: center; margin-top: 1rem;">Grid Layout</h4>
+                        <p style="color: var(--antiflash-white);">Organizes entities in a structured grid pattern for systematic analysis and comparison.</p>
+                    </div>
+                    
+                    <div class="image-container">
+                        <img src="../images/osint-studio-organicForceLayout.png" alt="Organic layout showing natural relationship flows">
+                        <h4 style="color: var(--antiflash-white); text-align: center; margin-top: 1rem;">Organic Layout</h4>
+                        <p style="color: var(--antiflash-white);">Creates natural, tree-like structures that emphasize hierarchical relationships.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Automated Report Generation</h2>
+                <div class="image-container">
+                    <img src="../images/osint-studio-generateReport.png" alt="Report generation interface showing various report templates">
+                </div>
+                <p>OSINT Studio includes powerful report generation capabilities that automatically compile investigation data into reports suitable for documentation. The reporting system generates multiple report types including investigation summaries, executive briefs, and detailed timeline analysis.</p>
+            </section>
+
+            <section>
+                <h2>Technical Architecture</h2>
+                
+                <div class="implementation-phase">
+                    <h3>Backend (Rust)</h3>
+                    <ul>
+                        <li>Tauri 2.0: Cross-platform desktop framework providing secure API access</li>
+                        <li>Serde: JSON serialization for efficient data exchange between frontend and backend</li>
+                        <li>UUID: Unique entity identification ensuring data integrity</li>
+                        <li>Chrono: Comprehensive date and time handling for timeline features</li>
+                        <li>Anyhow: Robust error handling and recovery mechanisms</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>Frontend (React/TypeScript)</h3>
+                    <ul>
+                        <li>React 18: Modern UI framework with hooks for efficient state management</li>
+                        <li>TypeScript: Type-safe development ensuring code reliability</li>
+                        <li>Cytoscape.js: Interactive graph visualization with advanced layout algorithms</li>
+                        <li>Lucide React: Modern icon library for consistent UI design</li>
+                        <li>Vite: Fast build tool and development server</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>OSINT Capabilities</h2>
+                
+                <div class="implementation-phase">
+                    <h3>Entity Types Supported</h3>
+                    <ul>
+                        <li>Person: Individuals with biographical and contact information</li>
+                        <li>Organization: Companies, agencies, and institutional entities</li>
+                        <li>CryptoWallet: Cryptocurrency addresses and transaction tracking</li>
+                        <li>SocialAccount: Social media profiles and online identities</li>
+                        <li>Domain: Websites and internet infrastructure</li>
+                        <li>IpAddress: Network infrastructure and hosting information</li>
+                        <li>Email: Email addresses and communication patterns</li>
+                        <li>Phone: Phone numbers and telecommunications data</li>
+                        <li>Document: Files, reports, and evidence materials</li>
+                        <li>Event: Incidents, meetings, and timeline markers</li>
+                    </ul>
+                </div>
+
+                <div class="implementation-phase">
+                    <h3>Relationship Types</h3>
+                    <ul>
+                        <li>Owns: Property, asset, or ownership relationships</li>
+                        <li>Controls: Authority or control relationships</li>
+                        <li>TransactsWith: Financial or transaction relationships</li>
+                        <li>MemberOf: Membership in organizations or groups</li>
+                        <li>ConnectedTo: General connections and associations</li>
+                        <li>SameAs: Identity correlation across different platforms</li>
+                        <li>RelatedTo: General relationships and connections</li>
+                        <li>ParentOf/ChildOf: Hierarchical relationships</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="challenges">
+                <h2>Security and Privacy</h2>
+                <div class="challenge-item">
+                    <h3>Local Data Storage</h3>
+                    <p>All investigation data is stored locally on the user's machine, ensuring complete control over sensitive information and eliminating cloud dependency risks.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Open Source Transparency</h3>
+                    <p>The entire codebase is open source under the MIT license, allowing security audits and community contributions to maintain high security standards.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Ethical OSINT Practices</h3>
+                    <p>The tool is designed for legitimate OSINT research using publicly available information only, with built-in reminders about legal and ethical guidelines.</p>
+                </div>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Future Development</h2>
+                <h3>Planned Enhancements</h3>
+                <ul>
+                    <li>SQLite Integration: Enhanced data persistence and query capabilities</li>
+                    <li>Advanced Analytics: Clustering algorithms, path finding, and centrality analysis</li>
+                    <li>API Integrations: Automated data collection from OSINT sources</li>
+                    <li>Encryption Support: Strong encryption for sensitive investigation data</li>
+                    <li>Multi-Workspace: Support for complex, multi-case investigations</li>
+                    <li>Timeline Visualization: Enhanced temporal analysis capabilities</li>
+                </ul>
+            </section>
+
+            <section class="project-links">
+                <h2>Project Resources</h2>
+                <div class="links-container">
+                    <a href="https://github.com/sooox-cc/osint-studio" target="_blank" class="project-button">View on GitHub</a>
+                    <a href="../projects.html" class="project-button">Back to Projects</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Subtitle Generator - Kyano Trevisan</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../internship.html">Internship</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>YouTube Subtitle Generator</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>OpenAI Whisper</span>
+                        <span>yt-dlp</span>
+                        <span>FFmpeg</span>
+                        <span>AI/ML</span>
+                        <span>Speech Recognition</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="implementation-phase">
+                <h2>Project Overview</h2>
+                <p>YouTube Subtitle Generator is a web application that automatically generates and translates subtitles for YouTube videos using OpenAI's Whisper AI model. The application provides a synchronized viewing experience with real-time subtitle highlighting and auto-scrolling capabilities.</p>
+                <p>Built with Flask and modern web technologies, the application supports both regular YouTube videos and YouTube Shorts, automatically translating content from any language to English. It offers an accessible solution for content creators, educators, and viewers who need accurate subtitles for video content.</p>
+                
+                <div class="image-container">
+                    <img src="../images/youtube-subtitle-generator.png" alt="YouTube Subtitle Generator interface">
+                </div>
+                <div class="image-container">
+                    <img src="../images/youtube-subtitle-generated.png" alt="YouTube Subtitle Generator interface">
+                </div>
+            </section>
+
+            <section class="key-features">
+                <h2>Core Features</h2>
+                <ul>
+                    <li>
+                        <h3>AI-Powered Transcription</h3>
+                        <p>Utilizes OpenAI's Whisper model for highly accurate speech recognition and automatic transcription of video content.</p>
+                    </li>
+                    <li>
+                        <h3>Automatic Translation</h3>
+                        <p>Translates subtitles from any language to English automatically, making content accessible to global audiences.</p>
+                    </li>
+                    <li>
+                        <h3>Synchronized Playback</h3>
+                        <p>Real-time subtitle synchronization with video playback using YouTube's IFrame API for seamless viewing experience.</p>
+                    </li>
+                    <li>
+                        <h3>Auto-scrolling Subtitles</h3>
+                        <p>Intelligent subtitle highlighting and auto-scrolling that follows video playback for enhanced readability.</p>
+                    </li>
+                    <li>
+                        <h3>YouTube Shorts Support</h3>
+                        <p>Full compatibility with both regular YouTube videos and YouTube Shorts format for comprehensive coverage.</p>
+                    </li>
+                    <li>
+                        <h3>Responsive Design</h3>
+                        <p>Mobile-friendly interface that adapts to various screen sizes for optimal viewing on any device.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Technical Architecture</h2>
+                <h3>AI & Machine Learning Components</h3>
+                <ul>
+                    <li><strong>OpenAI Whisper:</strong> State-of-the-art speech recognition model for accurate transcription</li>
+                    <li><strong>Automatic Language Detection:</strong> Identifies source language and translates to English</li>
+                    <li><strong>Timestamp Generation:</strong> Precise timing information for subtitle synchronization</li>
+                    <li><strong>Audio Processing:</strong> Advanced audio extraction and preprocessing for optimal recognition</li>
+                </ul>
+
+                <h3>Backend Infrastructure</h3>
+                <ul>
+                    <li><strong>Flask Web Server:</strong> Lightweight Python framework handling requests and processing</li>
+                    <li><strong>yt-dlp Integration:</strong> Robust YouTube video downloading and audio extraction</li>
+                    <li><strong>FFmpeg Processing:</strong> High-quality audio format conversion and optimization</li>
+                    <li><strong>File Management:</strong> Automatic cleanup of temporary files after processing</li>
+                </ul>
+
+                <h3>Frontend Features</h3>
+                <ul>
+                    <li><strong>YouTube IFrame API:</strong> Embedded video player with full playback controls</li>
+                    <li><strong>Real-time Synchronization:</strong> JavaScript-based subtitle timing and highlighting</li>
+                    <li><strong>Progressive Enhancement:</strong> Graceful degradation for different browser capabilities</li>
+                    <li><strong>Responsive Layout:</strong> CSS Grid and Flexbox for optimal display across devices</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Processing Workflow</h2>
+                <h3>Audio Extraction Pipeline</h3>
+                <ul>
+                    <li><strong>URL Validation:</strong> Verifies YouTube URL format and video availability</li>
+                    <li><strong>Audio Download:</strong> Extracts high-quality audio stream using yt-dlp</li>
+                    <li><strong>Format Conversion:</strong> Converts audio to optimal format for Whisper processing</li>
+                    <li><strong>Quality Optimization:</strong> Preprocesses audio for improved recognition accuracy</li>
+                </ul>
+
+                <h3>AI Processing Steps</h3>
+                <ul>
+                    <li><strong>Speech Recognition:</strong> Whisper model processes audio for text transcription</li>
+                    <li><strong>Language Detection:</strong> Automatic identification of spoken language</li>
+                    <li><strong>Translation Processing:</strong> Converts non-English content to English text</li>
+                    <li><strong>Timestamp Alignment:</strong> Generates precise timing for subtitle synchronization</li>
+                </ul>
+
+                <h3>Output Generation</h3>
+                <ul>
+                    <li><strong>Subtitle Formatting:</strong> Creates timestamped subtitle entries</li>
+                    <li><strong>Web Integration:</strong> Embeds processed subtitles with YouTube player</li>
+                    <li><strong>Cleanup Process:</strong> Removes temporary files and frees system resources</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>System Requirements</h2>
+                <h3>Core Dependencies</h3>
+                <ul>
+                    <li><strong>Python 3.11:</strong> Specifically required for OpenAI Whisper compatibility</li>
+                    <li><strong>FFmpeg:</strong> Essential for audio processing and format conversion</li>
+                    <li><strong>CUDA Support:</strong> Optional GPU acceleration for faster processing</li>
+                    <li><strong>Internet Connection:</strong> Required for YouTube video access and downloads</li>
+                </ul>
+
+                <h3>Performance Considerations</h3>
+                <ul>
+                    <li><strong>Processing Time:</strong> Varies based on video length and system capabilities</li>
+                    <li><strong>Memory Usage:</strong> Proportional to video duration and audio quality</li>
+                    <li><strong>Storage Requirements:</strong> Temporary space for audio files during processing</li>
+                    <li><strong>Network Bandwidth:</strong> Affects download speed and processing initiation</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Installation & Setup</h2>
+                <h3>Platform-Specific Setup</h3>
+                <ul>
+                    <li><strong>Ubuntu/Debian:</strong> <code>sudo apt-get install ffmpeg</code></li>
+                    <li><strong>Arch Linux:</strong> <code>sudo pacman -S ffmpeg</code></li>
+                    <li><strong>macOS:</strong> <code>brew install ffmpeg</code></li>
+                    <li><strong>Windows:</strong> Download from FFmpeg official website</li>
+                </ul>
+
+                <h3>Virtual Environment Setup</h3>
+                <ul>
+                    <li>Create environment specifically with Python 3.11</li>
+                    <li>Install dependencies from requirements.txt</li>
+                    <li>Verify FFmpeg installation and PATH configuration</li>
+                    <li>Test Whisper model download and initialization</li>
+                </ul>
+            </section>
+
+            <section class="challenges">
+                <h2>Development Challenges & Solutions</h2>
+                <div class="challenge-item">
+                    <h3>Python Version Compatibility</h3>
+                    <p>Challenge: OpenAI Whisper requires specific Python versions, with newer versions causing dependency conflicts.</p>
+                    <p>Solution: Specified Python 3.11 requirement and provided clear installation instructions for virtual environment setup with version constraints.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Real-time Synchronization</h3>
+                    <p>Challenge: Achieving precise synchronization between YouTube video playback and generated subtitle timing.</p>
+                    <p>Solution: Implemented JavaScript timing mechanisms with YouTube IFrame API integration for frame-accurate subtitle display.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Audio Processing Performance</h3>
+                    <p>Challenge: Optimizing processing time for long videos while maintaining transcription accuracy.</p>
+                    <p>Solution: Utilized FFmpeg optimization settings and Whisper model selection based on accuracy vs. speed requirements.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Cross-Platform Compatibility</h3>
+                    <p>Challenge: Ensuring consistent functionality across different operating systems and FFmpeg installations.</p>
+                    <p>Solution: Provided comprehensive installation guides for each platform and implemented robust error handling for missing dependencies.</p>
+                </div>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>User Experience Features</h2>
+                <h3>Interface Design</h3>
+                <ul>
+                    <li>Clean, intuitive interface for easy URL input and processing initiation</li>
+                    <li>Progress indicators showing processing status and estimated completion time</li>
+                    <li>Error handling with clear messages for troubleshooting common issues</li>
+                    <li>Responsive design adapting to different screen sizes and orientations</li>
+                </ul>
+
+                <h3>Accessibility Features</h3>
+                <ul>
+                    <li>High contrast subtitle display for improved readability</li>
+                    <li>Keyboard navigation support for video controls</li>
+                    <li>Screen reader compatible markup and ARIA labels</li>
+                    <li>Customizable subtitle appearance and sizing options</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Future Enhancements</h2>
+                <h3>Planned Features</h3>
+                <ul>
+                    <li>Support for additional output languages beyond English</li>
+                    <li>Batch processing capabilities for multiple videos</li>
+                    <li>Subtitle export in various formats (SRT, VTT, etc.)</li>
+                    <li>User accounts for processing history and preferences</li>
+                    <li>API endpoints for programmatic access</li>
+                    <li>Integration with other video platforms beyond YouTube</li>
+                </ul>
+            </section>
+
+            <section class="project-links">
+                <h2>Project Resources</h2>
+                <div class="links-container">
+                    <a href="https://github.com/sooox-cc/youtube-subtitle-generator" target="_blank" class="project-button">View on GitHub</a>
+                    <a href="../projects.html" class="project-button">Back to Projects</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

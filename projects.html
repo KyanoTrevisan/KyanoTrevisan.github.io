@@ -12,9 +12,10 @@
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About Me</a></li>
-                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="internship.html">Internship</a></li>
             </ul>
         </nav>
     </header>
@@ -24,10 +25,36 @@
             <h1>Projects & Accomplishments</h1>
 
             <div class="projects-grid">
-                <!-- YOLOv8 Project -->
+                <!-- OSINT Studio Project -->
                 <div class="project-card featured">
+                    <div>
+                        <div class="project-header">
+                            <span class="project-tag">Featured</span>
+                            <h2>OSINT Studio</h2>
+                        </div>
+                        <div class="project-content">
+                            <p>An open-source desktop application for OSINT investigations with advanced graph visualization, confidence scoring, and automated reporting. Built with Rust and React as a comprehensive FOSS alternative for intelligence analysts and researchers.</p>
+
+                            <div class="tech-stack">
+                                <span>Rust</span>
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Tauri 2.0</span>
+                                <span>Cytoscape.js</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/sooox-cc/osint-studio" target="_blank" class="project-button">GitHub</a>
+                                <a href="projects/osint-studio.html" class="project-button">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/osint-studio.png" alt="OSINT Studio interface showing graph visualization">
+                </div>
+
+                <!-- YOLOv8 Project -->
+                <div class="project-card">
                     <div class="project-header">
-                        <span class="project-tag">Featured</span>
                         <h2>AI-Powered Weed Detection System</h2>
                     </div>
                     <img src="images/4-0-ai-visualization.png" alt="Weed detection visualization">
@@ -186,6 +213,172 @@
                             <a href="https://github.com/KyanoTrevisan/PrivacyMatters-Blog" target="_blank"
                                 class="project-button" disabled>Github</a>
                             <!-- disabled because the repo is not public yet, TODO: look into this -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linkpen Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>Linkpen</h2>
+                    </div>
+                    <img src="images/linkpen.png" alt="Linkpen link-in-bio platform">
+                    <div class="project-content">
+                        <p>A free, open-source, customizable link-in-bio tool that helps creators share everything they create, curate, or sell from their social media profiles. Features email-less registration, custom themes, and an admin dashboard.</p>
+
+                        <div class="tech-stack">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>EJS</span>
+                            <span>JavaScript</span>
+                            <span>CSS3</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://linkpen.xyz/" target="_blank" class="project-button">Live Site</a>
+                            <a href="https://github.com/sooox-cc/linkpen" target="_blank" class="project-button">GitHub</a>
+                            <a href="projects/linkpen.html" class="project-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breach Browser Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>Breach Browser</h2>
+                    </div>
+                    <img src="images/breach-browser.png" alt="Breach Browser search interface">
+                    <div class="project-content">
+                        <p>A fast and efficient full-text search engine for large text datasets with a clean web interface. Built with Python, Elasticsearch, and Flask for efficient chunking and progressive loading of search results.</p>
+
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Elasticsearch</span>
+                            <span>Flask</span>
+                            <span>Docker</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/sooox-cc/breach-browser" target="_blank" class="project-button">GitHub</a>
+                            <a href="projects/breach-browser.html" class="project-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTube Subtitle Generator Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>YouTube Subtitle Generator</h2>
+                    </div>
+                    <img src="images/youtube-subtitle-generated.png" alt="YouTube subtitle generator interface">
+                    <div class="project-content">
+                        <p>A web application that generates and translates subtitles for YouTube videos using OpenAI's Whisper. Features real-time subtitle highlighting, auto-scrolling, and support for both regular videos and Shorts.</p>
+
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>OpenAI Whisper</span>
+                            <span>yt-dlp</span>
+                            <span>FFmpeg</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/sooox-cc/youtube-subtitle-generator" target="_blank" class="project-button">GitHub</a>
+                            <a href="projects/youtube-subtitle-generator.html" class="project-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PGP Verification Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>PGP Identity Verification</h2>
+                    </div>
+                    <img src="images/pgp-verification.png" alt="PGP verification interface">
+                    <div class="project-content">
+                        <p>A proof-of-concept challenge-response protocol for verifying identity using PGP encryption. Provides enhanced security for user authentication without requiring KYC procedures, ideal for privacy-focused applications.</p>
+
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>PGPy</span>
+                            <span>Cryptography</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://pgp-verification.streamlit.app/" target="_blank" class="project-button">Live Demo</a>
+                            <a href="https://github.com/sooox-cc/PGP-Verification" target="_blank" class="project-button">GitHub</a>
+                            <a href="projects/pgp-verification.html" class="project-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domain Checker Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>Domain Availability Checker</h2>
+                    </div>
+                    <img src="images/domain-checker.png" alt="Domain checker tool">
+                    <div class="project-content">
+                        <p>A Python tool that analyzes the NLTK words corpus to find available domain names by intelligently splitting words and checking availability across multiple TLDs with robust error handling and progress tracking.</p>
+
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>NLTK</span>
+                            <span>WHOIS</span>
+                            <span>Domain Analysis</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/sooox-cc/domainchecker" target="_blank" class="project-button">GitHub</a>
+                            <a href="projects/domain-checker.html" class="project-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Styling Collection -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>Frontend Styling Collection</h2>
+                    </div>
+                    <img src="images/frontend-collection.png" alt="Frontend styling examples">
+                    <div class="project-content">
+                        <p>A collection of frontend UI designs showcasing different styling techniques including a dev dashboard, mesh gradient heroes, neon search interfaces, and directory viewers with modern design patterns.</p>
+
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>UI/UX Design</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/sooox-cc/frontend" target="_blank" class="project-button">GitHub</a>
+                            <a href="projects/frontend-collection.html" class="project-button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Self-Hosting Infrastructure Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2>Self-Hosting Infrastructure</h2>
+                    </div>
+                    <img src="images/self-hosting-infrastructure.png" alt="Self-hosting infrastructure diagram">
+                    <div class="project-content">
+                        <p>A comprehensive privacy-first self-hosting infrastructure built on Proxmox, providing alternatives to Big Tech services. Hosts 15+ services including Nextcloud, Matrix homeserver, Jellyfin, Vaultwarden, and privacy-focused frontends for social media platforms.</p>
+
+                        <div class="tech-stack">
+                            <span>Proxmox</span>
+                            <span>Docker</span>
+                            <span>Linux</span>
+                            <span>NGINX</span>
+                            <span>Privacy-First</span>
+                            <span>Self-Hosting</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="projects/self-hosting-infrastructure.html" class="project-button">Learn More</a>
                         </div>
                     </div>
                 </div>

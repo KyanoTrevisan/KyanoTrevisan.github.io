@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGP Identity Verification - Kyano Trevisan</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../internship.html">Internship</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>PGP Identity Verification</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>PGPy</span>
+                        <span>Cryptography</span>
+                        <span>Security</span>
+                        <span>Authentication</span>
+                        <span>Privacy</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="implementation-phase">
+                <h2>Project Overview</h2>
+                <p>PGP Identity Verification is a proof-of-concept application demonstrating a challenge-response protocol for verifying identity using Pretty Good Privacy (PGP) encryption. This innovative approach provides enhanced security for user authentication without requiring Know Your Customer (KYC) procedures.</p>
+                <p>The system is particularly valuable for privacy-focused applications, secure messaging platforms, and environments where traditional authentication methods may compromise user anonymity. It demonstrates how cryptographic principles can be applied to create robust identity verification systems.</p>
+                
+                <div class="image-container">
+                    <img src="../images/pgp-verification.png" alt="PGP verification interface">
+                </div>
+            </section>
+
+            <section class="key-features">
+                <h2>Core Features</h2>
+                <ul>
+                    <li>
+                        <h3>Challenge-Response Authentication</h3>
+                        <p>Generates random challenge messages that users must encrypt with their private PGP key, proving identity through cryptographic verification.</p>
+                    </li>
+                    <li>
+                        <h3>Enhanced Security</h3>
+                        <p>Public keys are stored securely during account creation while private keys remain confidential and never transmitted over the network.</p>
+                    </li>
+                    <li>
+                        <h3>Privacy-Focused Design</h3>
+                        <p>Ensures identity verification without extensive personal data collection, suitable for high-security environments requiring user anonymity.</p>
+                    </li>
+                    <li>
+                        <h3>No KYC Requirements</h3>
+                        <p>Eliminates the need for Know Your Customer procedures while maintaining strong identity verification capabilities.</p>
+                    </li>
+                    <li>
+                        <h3>Bot Protection</h3>
+                        <p>Serves as an effective anti-bot mechanism due to the computational requirements of PGP encryption/decryption.</p>
+                    </li>
+                    <li>
+                        <h3>Two-Factor Authentication</h3>
+                        <p>Can be integrated as part of multi-factor authentication systems for additional security layers.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>How It Works</h2>
+                <h3>Authentication Process</h3>
+                <ul>
+                    <li><strong>Key Registration:</strong> Users submit their PGP public key during account creation</li>
+                    <li><strong>Challenge Generation:</strong> System generates a random message for identity verification</li>
+                    <li><strong>User Encryption:</strong> User encrypts the challenge using their private PGP key</li>
+                    <li><strong>Server Verification:</strong> System decrypts the response using the stored public key</li>
+                    <li><strong>Identity Confirmation:</strong> Successful decryption confirms user identity</li>
+                </ul>
+
+                <h3>Cryptographic Foundation</h3>
+                <ul>
+                    <li><strong>PGP Standards:</strong> Utilizes Pretty Good Privacy encryption for secure communication</li>
+                    <li><strong>Asymmetric Cryptography:</strong> Public-private key pairs ensure secure identity verification</li>
+                    <li><strong>Challenge Uniqueness:</strong> Each verification uses a unique, randomly generated challenge</li>
+                    <li><strong>Tamper Detection:</strong> Any modification to encrypted data is immediately detectable</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Technical Implementation</h2>
+                <h3>Backend Components</h3>
+                <ul>
+                    <li><strong>Streamlit Framework:</strong> Python web framework providing interactive user interface</li>
+                    <li><strong>PGPy Library:</strong> Comprehensive PGP implementation for encryption/decryption operations</li>
+                    <li><strong>Random Challenge Generator:</strong> Cryptographically secure random message generation</li>
+                    <li><strong>Key Management System:</strong> Secure storage and retrieval of public keys</li>
+                    <li><strong>Verification Engine:</strong> Core logic for challenge-response validation</li>
+                </ul>
+
+                <h3>Security Features</h3>
+                <ul>
+                    <li><strong>Key Validation:</strong> Comprehensive verification of PGP key format and integrity</li>
+                    <li><strong>Session Management:</strong> Secure handling of verification sessions and state</li>
+                    <li><strong>Error Handling:</strong> Robust error management preventing information leakage</li>
+                    <li><strong>Timing Attack Protection:</strong> Consistent response times regardless of verification outcome</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Use Cases & Applications</h2>
+                <h3>Primary Applications</h3>
+                <ul>
+                    <li><strong>Private Messaging Platforms:</strong> Secure identity verification for encrypted communication systems</li>
+                    <li><strong>Secure Business Communications:</strong> Enterprise environments requiring assured user identity</li>
+                    <li><strong>Cryptocurrency Platforms:</strong> Wallet access and transaction authorization without personal data</li>
+                    <li><strong>Research Platforms:</strong> Academic and research environments requiring anonymous but verified access</li>
+                    <li><strong>Whistleblower Systems:</strong> Secure reporting platforms maintaining source anonymity</li>
+                </ul>
+
+                <h3>Integration Scenarios</h3>
+                <ul>
+                    <li><strong>Multi-Factor Authentication:</strong> Additional security layer for existing authentication systems</li>
+                    <li><strong>API Access Control:</strong> Securing programmatic access to sensitive services</li>
+                    <li><strong>Document Signing:</strong> Verifying identity for digital document authentication</li>
+                    <li><strong>Secure File Sharing:</strong> Identity verification for encrypted file exchange platforms</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Demo Application Features</h2>
+                <h3>Interactive Interface</h3>
+                <ul>
+                    <li><strong>Public Key Input:</strong> Text area for submitting PGP public keys</li>
+                    <li><strong>Challenge Display:</strong> Clear presentation of generated challenge messages</li>
+                    <li><strong>Encryption Guidance:</strong> Step-by-step instructions for challenge encryption</li>
+                    <li><strong>Verification Results:</strong> Immediate feedback on identity verification attempts</li>
+                    <li><strong>Error Messaging:</strong> Helpful error messages for troubleshooting issues</li>
+                </ul>
+
+                <h3>Educational Components</h3>
+                <ul>
+                    <li><strong>Process Explanation:</strong> Detailed description of the verification workflow</li>
+                    <li><strong>Security Benefits:</strong> Information about privacy and security advantages</li>
+                    <li><strong>Use Case Examples:</strong> Practical applications and integration possibilities</li>
+                    <li><strong>Technical Details:</strong> Insights into cryptographic implementation</li>
+                </ul>
+            </section>
+
+            <section class="challenges">
+                <h2>Development Challenges & Solutions</h2>
+                <div class="challenge-item">
+                    <h3>Key Format Validation</h3>
+                    <p>Challenge: Ensuring robust validation of various PGP key formats while maintaining compatibility across different PGP implementations.</p>
+                    <p>Solution: Implemented comprehensive key parsing with PGPy library, supporting multiple key formats and providing clear validation feedback.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>User Experience Design</h3>
+                    <p>Challenge: Making complex cryptographic processes accessible to users without extensive PGP knowledge.</p>
+                    <p>Solution: Created intuitive interface with step-by-step guidance and clear explanations of each verification step.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Security Implementation</h3>
+                    <p>Challenge: Preventing various attack vectors while maintaining the simplicity of the proof-of-concept demonstration.</p>
+                    <p>Solution: Implemented timing attack protection, secure random generation, and proper error handling without exposing sensitive information.</p>
+                </div>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Security Considerations</h2>
+                <h3>Threat Model</h3>
+                <ul>
+                    <li><strong>Man-in-the-Middle:</strong> HTTPS deployment prevents interception of challenges and responses</li>
+                    <li><strong>Replay Attacks:</strong> Unique challenges for each verification prevent replay vulnerabilities</li>
+                    <li><strong>Timing Attacks:</strong> Consistent response times prevent timing-based information leakage</li>
+                    <li><strong>Key Compromise:</strong> Regular key rotation and revocation mechanisms recommended</li>
+                </ul>
+
+                <h3>Best Practices</h3>
+                <ul>
+                    <li><strong>Key Generation:</strong> Use strong entropy sources for PGP key creation</li>
+                    <li><strong>Private Key Protection:</strong> Secure storage and handling of private keys</li>
+                    <li><strong>Regular Rotation:</strong> Periodic key updates and revocation procedures</li>
+                    <li><strong>Secure Communication:</strong> Always use HTTPS for challenge-response exchanges</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Future Enhancements</h2>
+                <h3>Technical Improvements</h3>
+                <ul>
+                    <li>Integration with hardware security modules (HSMs)</li>
+                    <li>Support for additional cryptographic standards beyond PGP</li>
+                    <li>Mobile application implementation for easier access</li>
+                    <li>API endpoints for programmatic integration</li>
+                    <li>Advanced key management and rotation features</li>
+                </ul>
+
+                <h3>Feature Expansions</h3>
+                <ul>
+                    <li>Multi-signature verification support</li>
+                    <li>Biometric integration for additional security layers</li>
+                    <li>Audit logging and compliance reporting</li>
+                    <li>Integration with existing identity management systems</li>
+                </ul>
+            </section>
+
+            <section class="project-links">
+                <h2>Project Resources</h2>
+                <div class="links-container">
+                    <a href="https://pgp-verification.streamlit.app/" target="_blank" class="project-button">Live Demo</a>
+                    <a href="https://github.com/sooox-cc/PGP-Verification" target="_blank" class="project-button">View on GitHub</a>
+                    <a href="../projects.html" class="project-button">Back to Projects</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

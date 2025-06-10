@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Availability Checker - Kyano Trevisan</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../internship.html">Internship</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>Domain Availability Checker</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>NLTK</span>
+                        <span>WHOIS</span>
+                        <span>Domain Analysis</span>
+                        <span>Automation</span>
+                        <span>Data Mining</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="implementation-phase">
+                <h2>Project Overview</h2>
+                <p>Domain Availability Checker is a Python tool that analyzes the NLTK words corpus to discover available domain names through intelligent word splitting and availability checking across multiple Top Level Domains (TLDs). This automated approach to domain discovery helps identify potential domain names that might otherwise be overlooked.</p>
+                <p>The tool implements sophisticated algorithms for word analysis, robust error handling, and comprehensive progress tracking, making it suitable for both individual domain hunters and businesses seeking available domain options for branding purposes.</p>
+                
+                <div class="image-container">
+                    <img src="../images/domain-checker.png" alt="Domain checker tool interface">
+                </div>
+            </section>
+
+            <section class="key-features">
+                <h2>Core Features</h2>
+                <ul>
+                    <li>
+                        <h3>Intelligent Word Splitting</h3>
+                        <p>Advanced algorithms analyze words to find meaningful splits that create potential domain names with commercial value.</p>
+                    </li>
+                    <li>
+                        <h3>Multi-TLD Support</h3>
+                        <p>Checks domain availability across multiple Top Level Domains including .com, .net, .org, and other popular extensions.</p>
+                    </li>
+                    <li>
+                        <h3>Robust Error Handling</h3>
+                        <p>Comprehensive error management with retry mechanisms to handle WHOIS server limitations and network issues.</p>
+                    </li>
+                    <li>
+                        <h3>Progress Persistence</h3>
+                        <p>Automatic progress saving with resume capabilities for interrupted operations, essential for large-scale domain checking.</p>
+                    </li>
+                    <li>
+                        <h3>Rate Limiting</h3>
+                        <p>Built-in rate limiting to respect WHOIS server policies and prevent IP blocking during extensive searches.</p>
+                    </li>
+                    <li>
+                        <h3>Comprehensive Logging</h3>
+                        <p>Detailed logging system for monitoring progress, debugging issues, and analyzing domain discovery patterns.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Technical Architecture</h2>
+                <h3>Core Components</h3>
+                <ul>
+                    <li><strong>NLTK Integration:</strong> Leverages the Natural Language Toolkit words corpus for comprehensive vocabulary analysis</li>
+                    <li><strong>Word Processing Engine:</strong> Intelligent algorithms for analyzing and splitting words into potential domain combinations</li>
+                    <li><strong>WHOIS Client:</strong> Robust WHOIS querying system with error handling and retry mechanisms</li>
+                    <li><strong>Progress Manager:</strong> Persistent storage system for tracking progress and enabling resume functionality</li>
+                    <li><strong>Rate Limiter:</strong> Configurable timing controls to respect server limitations and prevent blocking</li>
+                </ul>
+
+                <h3>Data Processing Pipeline</h3>
+                <ul>
+                    <li><strong>Corpus Loading:</strong> Downloads and processes NLTK words corpus on first run</li>
+                    <li><strong>Word Analysis:</strong> Analyzes each word for potential splitting opportunities</li>
+                    <li><strong>Domain Generation:</strong> Creates potential domain names from word combinations</li>
+                    <li><strong>Availability Checking:</strong> Queries WHOIS servers for domain availability status</li>
+                    <li><strong>Result Categorization:</strong> Organizes results into available, unavailable, and error categories</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Word Analysis Algorithm</h2>
+                <h3>Intelligent Splitting Logic</h3>
+                <ul>
+                    <li><strong>Syllable Analysis:</strong> Identifies natural word breaks based on linguistic patterns</li>
+                    <li><strong>Meaningful Combinations:</strong> Ensures resulting splits create recognizable or brandable terms</li>
+                    <li><strong>Length Optimization:</strong> Targets domain lengths that are practical for commercial use</li>
+                    <li><strong>Character Validation:</strong> Ensures compatibility with domain name character restrictions</li>
+                </ul>
+
+                <h3>Quality Filtering</h3>
+                <ul>
+                    <li><strong>Pronounceability:</strong> Filters for combinations that are easy to pronounce and remember</li>
+                    <li><strong>Commercial Viability:</strong> Prioritizes combinations with potential business value</li>
+                    <li><strong>Duplication Removal:</strong> Eliminates duplicate combinations and variations</li>
+                    <li><strong>Blacklist Filtering:</strong> Excludes inappropriate or problematic word combinations</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>WHOIS Integration & Rate Limiting</h2>
+                <h3>Server Management</h3>
+                <ul>
+                    <li><strong>Multi-Server Support:</strong> Distributes queries across multiple WHOIS servers</li>
+                    <li><strong>Server Health Monitoring:</strong> Tracks server response times and availability</li>
+                    <li><strong>Automatic Failover:</strong> Switches to alternative servers when primary servers are unavailable</li>
+                    <li><strong>Response Parsing:</strong> Intelligent parsing of WHOIS responses across different server formats</li>
+                </ul>
+
+                <h3>Rate Limiting Strategy</h3>
+                <ul>
+                    <li><strong>Configurable Delays:</strong> Default 1-second delay between requests (adjustable)</li>
+                    <li><strong>Exponential Backoff:</strong> Increases delays when servers show signs of rate limiting</li>
+                    <li><strong>IP Rotation:</strong> Support for proxy rotation to distribute load</li>
+                    <li><strong>Respectful Querying:</strong> Follows WHOIS server terms of service and best practices</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Results Management & Output</h2>
+                <h3>Categorized Results</h3>
+                <ul>
+                    <li><strong>Available Domains:</strong> Confirmed available domains ready for registration</li>
+                    <li><strong>Unavailable Domains:</strong> Already registered or reserved domains</li>
+                    <li><strong>Error Domains:</strong> Domains that couldn't be checked due to technical issues</li>
+                    <li><strong>Pending Domains:</strong> Domains requiring manual verification or investigation</li>
+                </ul>
+
+                <h3>Output Formats</h3>
+                <ul>
+                    <li><strong>JSON Export:</strong> Machine-readable format for integration with other tools</li>
+                    <li><strong>CSV Export:</strong> Spreadsheet-compatible format for analysis and filtering</li>
+                    <li><strong>Text Reports:</strong> Human-readable summaries with statistics and highlights</li>
+                    <li><strong>Log Files:</strong> Detailed processing logs for debugging and analysis</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Configuration & Customization</h2>
+                <h3>Adjustable Parameters</h3>
+                <ul>
+                    <li><strong>Word Limit:</strong> Configure maximum number of words to process for testing</li>
+                    <li><strong>TLD Selection:</strong> Choose specific top-level domains to check</li>
+                    <li><strong>Rate Limiting:</strong> Adjust delays and throttling based on server capabilities</li>
+                    <li><strong>Output Directories:</strong> Customize result file locations and naming conventions</li>
+                    <li><strong>Filtering Criteria:</strong> Set minimum/maximum domain length and complexity requirements</li>
+                </ul>
+
+                <h3>Advanced Settings</h3>
+                <ul>
+                    <li><strong>Resume Points:</strong> Configure checkpoint frequency for progress saving</li>
+                    <li><strong>Error Handling:</strong> Customize retry attempts and error categorization</li>
+                    <li><strong>Logging Levels:</strong> Adjust verbosity from basic progress to detailed debugging</li>
+                    <li><strong>Memory Management:</strong> Configure batch sizes for processing large word sets</li>
+                </ul>
+            </section>
+
+            <section class="challenges">
+                <h2>Development Challenges & Solutions</h2>
+                <div class="challenge-item">
+                    <h3>WHOIS Server Limitations</h3>
+                    <p>Challenge: Different WHOIS servers have varying rate limits, response formats, and availability patterns.</p>
+                    <p>Solution: Implemented adaptive rate limiting with server-specific configurations and automatic failover mechanisms.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Word Analysis Complexity</h3>
+                    <p>Challenge: Creating meaningful domain name combinations from arbitrary word splits while maintaining commercial viability.</p>
+                    <p>Solution: Developed linguistic analysis algorithms that consider syllable structure, pronounceability, and brandability factors.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Scale and Performance</h3>
+                    <p>Challenge: Processing large vocabularies efficiently while respecting server limitations and maintaining accuracy.</p>
+                    <p>Solution: Implemented batching, progress persistence, and resume capabilities with optimized memory management.</p>
+                </div>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Use Cases & Applications</h2>
+                <h3>Commercial Applications</h3>
+                <ul>
+                    <li><strong>Domain Investment:</strong> Identify valuable domains for portfolio building</li>
+                    <li><strong>Brand Development:</strong> Discover available domains for new business ventures</li>
+                    <li><strong>SEO Research:</strong> Find keyword-rich domains for specific niches</li>
+                    <li><strong>Competitive Analysis:</strong> Research domain availability in specific industries</li>
+                </ul>
+
+                <h3>Research Applications</h3>
+                <ul>
+                    <li><strong>Linguistic Studies:</strong> Analyze domain name patterns and language evolution</li>
+                    <li><strong>Market Research:</strong> Study domain registration trends and availability patterns</li>
+                    <li><strong>Academic Projects:</strong> Investigate naming conventions and digital real estate</li>
+                    <li><strong>Data Mining:</strong> Extract insights from large-scale domain availability data</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Installation & Usage</h2>
+                <h3>Quick Start</h3>
+                <ul>
+                    <li>Python 3.8+ required for modern language features and library compatibility</li>
+                    <li>Automatic NLTK data download on first run</li>
+                    <li>Virtual environment recommended for dependency isolation</li>
+                    <li>Configurable word limits for testing and production use</li>
+                </ul>
+
+                <h3>Running the Tool</h3>
+                <ul>
+                    <li><strong>Basic Usage:</strong> Run with default settings for comprehensive checking</li>
+                    <li><strong>Limited Testing:</strong> Use word limits for quick testing and validation</li>
+                    <li><strong>Resume Operations:</strong> Automatic detection and continuation of interrupted runs</li>
+                    <li><strong>Custom Configuration:</strong> Modify parameters for specific requirements</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Future Enhancements</h2>
+                <h3>Planned Features</h3>
+                <ul>
+                    <li>Machine learning integration for better domain value prediction</li>
+                    <li>Real-time domain monitoring and alert systems</li>
+                    <li>Integration with domain registrar APIs for automatic registration</li>
+                    <li>Advanced linguistic analysis for non-English domains</li>
+                    <li>Web interface for easier operation and result visualization</li>
+                    <li>Database integration for large-scale data management</li>
+                </ul>
+            </section>
+
+            <section class="project-links">
+                <h2>Project Resources</h2>
+                <div class="links-container">
+                    <a href="https://github.com/sooox-cc/domainchecker" target="_blank" class="project-button">View on GitHub</a>
+                    <a href="../projects.html" class="project-button">Back to Projects</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

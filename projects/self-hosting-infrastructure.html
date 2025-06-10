@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Hosting Infrastructure - Kyano Trevisan</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Me</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../internship.html">Internship</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-page">
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <h1>Self-Hosting Infrastructure</h1>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>Proxmox</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
+                        <span>NGINX</span>
+                        <span>Privacy-First</span>
+                        <span>Self-Hosting</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="implementation-phase">
+                <h2>Project Overview</h2>
+                <p>A comprehensive self-hosting infrastructure built on privacy-first principles, providing alternatives to Big Tech services while maintaining full control over personal data. This homelab setup demonstrates enterprise-level virtualization, containerization, and service orchestration using Proxmox as the foundation.</p>
+                <p>As a strong advocate for digital privacy and security, this infrastructure represents a commitment to data sovereignty, reducing reliance on cloud services that monetize personal information, and providing secure, private alternatives for everyday digital needs.</p>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Why Self-Host?</h2>
+                <h3>Privacy & Data Sovereignty</h3>
+                <ul>
+                    <li><strong>Full Data Control:</strong> Complete ownership and control over personal data without third-party access</li>
+                    <li><strong>No Data Mining:</strong> Eliminate corporate surveillance and data collection practices</li>
+                    <li><strong>Enhanced Security:</strong> Custom security configurations tailored to specific needs and threat models</li>
+                    <li><strong>Compliance:</strong> Ensure data handling meets personal privacy standards and regulations</li>
+                </ul>
+
+                <h3>Technical Benefits</h3>
+                <ul>
+                    <li><strong>Customization:</strong> Modify services to exact requirements without vendor limitations</li>
+                    <li><strong>Performance:</strong> Optimize hardware and software stack for specific use cases</li>
+                    <li><strong>Learning:</strong> Hands-on experience with enterprise technologies and system administration</li>
+                    <li><strong>Cost Control:</strong> Predictable costs without recurring subscription fees</li>
+                </ul>
+
+                <h3>Independence & Resilience</h3>
+                <ul>
+                    <li><strong>Service Continuity:</strong> No dependency on external service availability or business decisions</li>
+                    <li><strong>Feature Stability:</strong> Services don't change or disappear due to corporate restructuring</li>
+                    <li><strong>Geographic Independence:</strong> Access services regardless of location or regional restrictions</li>
+                    <li><strong>Offline Capability:</strong> Many services continue functioning during internet outages</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Proxmox Virtualization Platform</h2>
+                <h3>Infrastructure Foundation</h3>
+                <p>Proxmox Virtual Environment (VE) serves as the hypervisor foundation, providing enterprise-grade virtualization capabilities with both KVM virtual machines and LXC containers. This approach enables efficient resource utilization, easy backup and restoration, and simplified service management.</p>
+                <br>
+                <h4>Key Advantages:</h4>
+                <ul>
+                    <li><strong>Resource Efficiency:</strong> Dynamic resource allocation between virtual machines and containers</li>
+                    <li><strong>High Availability:</strong> Built-in clustering and failover capabilities for critical services</li>
+                    <li><strong>Backup & Recovery:</strong> Automated backup scheduling with incremental snapshots</li>
+                    <li><strong>Web Management:</strong> Comprehensive web interface for infrastructure management</li>
+                    <li><strong>Storage Flexibility:</strong> Support for various storage backends including ZFS for data integrity</li>
+                </ul>
+
+                <h3>VM and Container Strategy</h3>
+                <ul>
+                    <li><strong>LXC Containers:</strong> Lightweight deployment for most services with minimal overhead</li>
+                    <li><strong>Virtual Machines:</strong> Full isolation for security-critical services and complex applications</li>
+                    <li><strong>Resource Pools:</strong> Logical grouping of resources for different service categories</li>
+                    <li><strong>Network Segmentation:</strong> VLANs and firewall rules for service isolation</li>
+                </ul>
+            </section>
+
+            <section class="key-features">
+                <h2>Hosted Services Portfolio</h2>
+                <ul>
+                    <li>
+                        <h3>PrivacyMatters Blog Platform</h3>
+                        <p>Custom Laravel-based blogging platform focused on privacy, security, and digital rights advocacy with integrated PGP key support and enhanced privacy features.</p>
+                    </li>
+                    <li>
+                        <h3>Invidious (YouTube Frontend)</h3>
+                        <p>Privacy-respecting alternative YouTube frontend that removes tracking, ads, and Google integration while providing subscription management and video downloading capabilities.</p>
+                    </li>
+                    <li>
+                        <h3>Redlib (Reddit Frontend)</h3>
+                        <p>Privacy-focused Reddit frontend that eliminates tracking scripts, provides clean interface design, and allows browsing without creating accounts or revealing IP addresses.</p>
+                    </li>
+                    <li>
+                        <h3>Nextcloud Personal Cloud</h3>
+                        <p>Comprehensive cloud storage and collaboration platform providing file synchronization, calendar, contacts, notes, and office suite capabilities with complete data ownership.</p>
+                    </li>
+                    <li>
+                        <h3>Vaultwarden Password Manager</h3>
+                        <p>Self-hosted Bitwarden-compatible password manager providing secure credential storage, sharing, and synchronization across devices with end-to-end encryption.</p>
+                    </li>
+                    <li>
+                        <h3>SearXNG Meta-Search Engine</h3>
+                        <p>Privacy-preserving search engine that aggregates results from multiple sources without storing search queries or user data, providing unbiased search results.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Media & Content Services</h2>
+                <h3>Jellyfin Media Server</h3>
+                <p>Open-source media server providing Netflix-like experience for personal media collections with transcoding, remote access, and multi-device support without telemetry or premium subscriptions.</p>
+                <br>
+                <h4>Features:</h4>
+                <ul>
+                    <li>Hardware-accelerated transcoding for optimal streaming performance</li>
+                    <li>Automatic metadata fetching and organization</li>
+                    <li>Multi-user support with parental controls and viewing restrictions</li>
+                    <li>Mobile and TV apps for seamless content consumption</li>
+                </ul>
+
+                <h3>Jellyseerr Request Management</h3>
+                <p>Content request and discovery platform integrated with Jellyfin, allowing users to request new movies and TV shows with automated download orchestration and availability notifications.</p>
+
+                <h3>Kavita Digital Library</h3>
+                <p>Self-hosted digital library management system for books, comics, and documents with reading progress tracking, metadata management, and responsive reading interface.</p>
+
+                <h3>Kiwix Offline Content</h3>
+                <p>Offline content server hosting Wikipedia mirrors and educational resources, providing access to knowledge during internet outages or in bandwidth-constrained environments.</p>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Productivity & Communication Services</h2>
+                <h3>Matrix Homeserver</h3>
+                <p>Decentralized, end-to-end encrypted communication platform providing secure messaging, voice, and video calls for personal and group communications with online friends.</p>
+                <br>
+                <h4>Security Features:</h4>
+                <ul>
+                    <li>End-to-end encryption for all messages and media</li>
+                    <li>Decentralized architecture eliminating single points of failure</li>
+                    <li>Device verification and cross-signing for identity assurance</li>
+                    <li>Federation capability for communicating with other Matrix servers</li>
+                </ul>
+
+                <h3>Docmost Knowledge Management</h3>
+                <p>Self-hosted alternative to Notion providing collaborative document editing, knowledge base management, and project organization with real-time collaboration features.</p>
+
+                <h3>Readeck Read-Later Service</h3>
+                <p>Privacy-focused read-later application that saves articles, web pages, and documents for offline reading with full-text search and organizational capabilities.</p>
+
+                <h3>Immich Photo Management</h3>
+                <p>Self-hosted Google Photos alternative providing automatic photo backup, AI-powered organization, facial recognition, and sharing capabilities with complete privacy control.</p>
+                <br>
+                <h4>Advanced Features:</h4>
+                <ul>
+                    <li>Machine learning-based photo categorization and search</li>
+                    <li>Timeline and map views for photo organization</li>
+                    <li>Automatic backup from mobile devices</li>
+                    <li>Sharing albums with granular permission controls</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Development & Utility Services</h2>
+                <h3>IT-Tools Development Utilities</h3>
+                <p>Collection of handy IT tools including encoders/decoders, formatters, generators, and converters for development work, eliminating the need for online tools that may log data.</p>
+
+                <h3>Tailscale VPN Coordination</h3>
+                <p>Self-hosted Wireguard-based VPN, providing secure mesh VPN capabilities for remote access to internal services without exposing them to the public internet.</p>
+                <br>
+                <h4>Network Security Benefits:</h4>
+                <ul>
+                    <li>Zero-trust network architecture with device authentication</li>
+                    <li>Encrypted point-to-point connections between devices</li>
+                    <li>Granular access controls and network segmentation</li>
+                    <li>Remote access without port forwarding or VPN server setup</li>
+                </ul>
+
+                <h3>RustDesk Remote Desktop</h3>
+                <p>Self-hosted remote desktop solution providing secure screen sharing and remote control capabilities without relying on external servers or cloud services.</p>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Technical Architecture</h2>
+                <h3>Container Orchestration</h3>
+                <ul>
+                    <li><strong>Docker Compose:</strong> Service definition and orchestration with dependency management</li>
+                    <li><strong>Persistent Storage:</strong> Docker volumes and bind mounts for data persistence</li>
+                    <li><strong>Environment Configuration:</strong> Centralized configuration management with secrets handling</li>
+                </ul>
+
+                <h3>Security Implementation</h3>
+                <ul>
+                    <li><strong>SSL/TLS Encryption:</strong> End-to-end encryption for all web services</li>
+                    <li><strong>Authentication:</strong> Single sign-on integration where possible with strong password policies</li>
+                    <li><strong>Regular Updates:</strong> Automated security updates and vulnerability monitoring</li>
+                </ul>
+
+                <h3>Monitoring & Maintenance</h3>
+                <ul>
+                    <li><strong>Resource Monitoring:</strong> CPU, memory, and storage utilization tracking</li>
+                    <li><strong>Service Health Checks:</strong> Automated monitoring with alerting for service failures</li>
+                    <li><strong>Log Aggregation:</strong> Centralized logging for troubleshooting and security analysis</li>
+                    <li><strong>Backup Automation:</strong> Regular backups with offsite storage and recovery testing</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Backup & Disaster Recovery</h2>
+                <h3>Multi-Tier Backup Strategy</h3>
+                <ul>
+                    <li><strong>VM Snapshots:</strong> Proxmox automated snapshots for rapid service restoration</li>
+                    <li><strong>Application Backups:</strong> Service-specific backup procedures for data consistency</li>
+                    <li><strong>Recovery Testing:</strong> Regular restore procedures to validate backup integrity</li>
+                </ul>
+
+                <h3>High Availability Design</h3>
+                <ul>
+                    <li><strong>Storage Replication:</strong> Mirrored RAID config allows retention even if one of my drives dies</li>
+                    <li><strong>Hardware Spares:</strong> Ready replacement hardware for critical components</li>
+                </ul>
+            </section>
+
+            <section class="challenges">
+                <h2>Challenges & Solutions</h2>
+                <div class="challenge-item">
+                    <h3>Resource Management</h3>
+                    <p>Challenge: Resource management isn't really a concern thanks to abundant enterprise-grade hardware.</p>
+                    <p>Hardware: HP ProLiant DL380 Gen9 with dual Xeon E5-2670 v3 CPUs (48 cores total), 756GB RAM (I know...), 2×5TB mirrored RAID storage. Current utilization: ~3% CPU, ~4% RAM - plenty of headroom for whatever I throw at it.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Security Complexity</h3>
+                    <p>Challenge: Maintaining security across diverse services with different attack surfaces and update schedules.</p>
+                    <p>Solution: Standardized security baseline, automated updates where possible, and regular security audits.</p>
+                </div>
+
+                <div class="challenge-item">
+                    <h3>Maintenance Overhead</h3>
+                    <p>Challenge: Keeping multiple services updated, monitored, and functioning reliably without full-time administration.</p>
+                    <p>Solution: Automation of routine tasks, standardized deployment procedures, and proactive monitoring with alerting.</p>
+                </div>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Privacy & Security Benefits</h2>
+                <h3>Data Protection</h3>
+                <ul>
+                    <li><strong>No Third-Party Access:</strong> Complete elimination of external data sharing</li>
+                    <li><strong>Encryption at Rest:</strong> Full disk encryption for all stored data</li>
+                    <li><strong>Encryption in Transit:</strong> TLS/SSL for all network communications</li>
+                    <li><strong>Access Controls:</strong> Granular permissions and authentication requirements</li>
+                </ul>
+
+                <h3>Privacy Assurance</h3>
+                <ul>
+                    <li><strong>No Telemetry:</strong> Services configured to disable all telemetry and tracking</li>
+                    <li><strong>Local Processing:</strong> All data processing occurs on local infrastructure</li>
+                    <li><strong>Audit Capability:</strong> Complete visibility into data handling and access patterns</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Learning Outcomes</h2>
+                <h3>Technical Skills Developed</h3>
+                <ul>
+                    <li><strong>Virtualization:</strong> Advanced Proxmox administration and optimization</li>
+                    <li><strong>Containerization:</strong> Docker and Docker Compose service orchestration</li>
+                    <li><strong>Network Engineering:</strong> VLAN configuration, firewalling, and VPN setup</li>
+                    <li><strong>System Administration:</strong> Linux server management and automation</li>
+                    <li><strong>Security Hardening:</strong> Implementing defense-in-depth strategies</li>
+                    <li><strong>Service Integration:</strong> Complex multi-service authentication and communication</li>
+                </ul>
+
+                <h3>Operational Experience</h3>
+                <ul>
+                    <li><strong>Incident Response:</strong> Troubleshooting and resolving service outages</li>
+                    <li><strong>Capacity Planning:</strong> Resource forecasting and infrastructure scaling</li>
+                    <li><strong>Backup Management:</strong> Implementing and testing disaster recovery procedures</li>
+                    <li><strong>Performance Tuning:</strong> Optimizing services for specific use cases</li>
+                    <li><strong>Documentation:</strong> Maintaining comprehensive infrastructure documentation</li>
+                </ul>
+            </section>
+
+            <section class="implementation-phase">
+                <h2>Future Enhancements</h2>
+                <h3>Planned Additions</h3>
+                <ul>
+                    <li>Enhanced monitoring with Prometheus and Grafana dashboards</li>
+                    <li>Integration of additional privacy-focused services as they mature</li>
+                </ul>
+            </section>
+
+            <section class="project-links">
+                <h2>Related Resources</h2>
+                <div class="links-container">
+                    <a href="https://privacymatters.cc" target="_blank" class="project-button">PrivacyMatters Blog</a>
+                    <a href="../projects.html" class="project-button">Back to Projects</a>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

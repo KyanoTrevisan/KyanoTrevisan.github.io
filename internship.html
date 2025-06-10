@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship - Kyano Trevisan</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="internship.html">Internship</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-page">
+        <section class="about-section">
+            <div class="about-header">
+                <h1>Data Engineering Internship</h1>
+                <div class="location-info">
+                    <p>📍 ACA Group - Sustainathon 2025</p>
+                    <p>🗓️ February 24 - May 28, 2025 (13 weeks)</p>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="professional-summary">
+                    <h2>Executive Summary</h2>
+                    <p>During my 13-week data engineering internship at ACA Group, I contributed to the "Sustainathon 2025" project - a mission-critical initiative to revolutionize Duvel Moortgat's sustainability reporting for CSRD (Corporate Sustainability Reporting Directive) compliance. This project transformed a functional proof-of-concept into a production-ready, maintainable platform that supports comprehensive regulatory requirements.</p>
+                    
+                    <p>The implementation delivered substantial technical improvements through code optimization and architectural restructuring. I reduced the codebase from over 300 lines to under 80 lines using dynamic Jinja templating across 39 models, improved processing time from 45 minutes to 20 minutes, and implemented a simplified data model with enhanced error handling throughout the system.</p>
+                </div>
+
+                <div class="project-overview">
+                    <h2>Project Context</h2>
+                    <p>Duvel Moortgat NV, Belgium's premier brewery group with facilities across multiple countries, needed to comply with the European CSRD regulations. This legislation requires comprehensive sustainability reports covering environmental impact, social aspects, and governance metrics with precise documentation and audit trails.</p>
+                    
+                    <p>Working alongside fellow intern Fabian Reyes under the mentorship of Kwinten Boes (Project Manager) and Thibo Vanderkam (Data Engineer), I focused on data engineering aspects while Fabian concentrated on dashboard development and client communication.</p>
+                </div>
+
+                <div class="technical-achievements">
+                    <h2>Technical Achievements</h2>
+                    
+                    <div class="achievement-item">
+                        <h3>🚀 Code Optimization & Maintainability</h3>
+                        <ul>
+                            <li>Implemented dynamic Jinja templating across 39 Silver source layer models</li>
+                            <li>Reduced water model code from 300+ lines to under 80 lines (75% reduction)</li>
+                            <li>Eliminated hundreds of lines of repetitive code system-wide</li>
+                            <li>Transformed location addition from 20-step manual process to 2-step configuration</li>
+                        </ul>
+                        
+                        <div class="image-container">
+                            <img src="internship/beforeAfterWaterDbtModel" alt="Before and after comparison of water dbt model showing code reduction from 300+ lines to under 80 lines">
+                            <p><em>Before and after: Water dbt model transformation showing dramatic code reduction through dynamic Jinja templating</em></p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h3>⚡ Performance & Processing Improvements</h3>
+                        <ul>
+                            <li>Reduced integration pipeline processing time from 45 minutes to 20 minutes (55% improvement)</li>
+                            <li>Implemented multithreading for parallel data source processing</li>
+                            <li>Optimized Microsoft Fabric Compute Unit (CU) usage</li>
+                            <li>Enhanced error detection and monitoring capabilities</li>
+                        </ul>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h3>🏗️ Architectural Improvements</h3>
+                        <ul>
+                            <li>Restructured medallion architecture with Bronze, Silver (Source/Enriched), and Gold layers</li>
+                            <li>Implemented test and production environments for safe development</li>
+                            <li>Enhanced data quality controls and audit trails for CSRD compliance</li>
+                            <li>Simplified data model consolidating multiple fact tables</li>
+                        </ul>
+                        
+                        <div class="image-container">
+                            <img src="internship/fabricLineage.png" alt="Microsoft Fabric data lineage diagram showing complete orchestration flow from data sources through integration and transformation to lakehouse">
+                            <p><em>Complete data lineage in Microsoft Fabric showing the end-to-end data flow from sources to analytics-ready datasets</em></p>
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h3>🔗 Integration & Data Quality</h3>
+                        <ul>
+                            <li>Sophisticated ClimateCamp integration for environmental impact calculations</li>
+                            <li>Enhanced SharePoint integration with comprehensive error handling</li>
+                            <li>Dynamic location code extraction and assignment system</li>
+                            <li>Year-based currency conversion with automatic rate processing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="technologies">
+                    <h2>Technologies & Tools</h2>
+                    <div class="tech-stack">
+                        <span>Microsoft Fabric</span>
+                        <span>dbt (Data Build Tool)</span>
+                        <span>SQL Server</span>
+                        <span>Azure DevOps</span>
+                        <span>Python</span>
+                        <span>PySpark</span>
+                        <span>Power BI</span>
+                        <span>SharePoint</span>
+                        <span>Azure KeyVault</span>
+                        <span>Jinja Templating</span>
+                    </div>
+                </div>
+
+                <div class="business-impact">
+                    <h2>Business Impact</h2>
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <h3>Operational Excellence</h3>
+                            <p>Transformed manual, error-prone sustainability reporting into an automated, scalable system processing data from 20+ global sites across 8 countries.</p>
+                        </div>
+                        <div class="impact-item">
+                            <h3>Regulatory Compliance</h3>
+                            <p>Enabled CSRD compliance through comprehensive audit trails, data quality validation, and calculation accuracy requirements.</p>
+                        </div>
+                        <div class="impact-item">
+                            <h3>Future Scalability</h3>
+                            <p>Parameterized architecture enables easy addition of new facilities and adaptation to evolving regulatory requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personal-growth">
+                    <h2>Personal & Professional Growth</h2>
+                    <p>This internship marked a complete transformation from student to professional consultant. I developed not only technical expertise in enterprise data platforms but also crucial soft skills in stakeholder communication, project management, and cross-functional collaboration.</p>
+                    
+                    <p>Key learning areas included:</p>
+                    <ul>
+                        <li><strong>Enterprise Technology:</strong> Mastery of Microsoft Fabric ecosystem and dbt for production-grade data engineering</li>
+                        <li><strong>Problem-Solving Evolution:</strong> From uncertain debugging to systematic, confidence-driven solution architecture</li>
+                        <li><strong>Stakeholder Communication:</strong> Learning to translate technical solutions into business value for different audiences</li>
+                        <li><strong>Security & Operations:</strong> Implementation of Azure KeyVault, proper error handling, and production environment management</li>
+                    </ul>
+                </div>
+
+                <div class="reflection">
+                    <h2>Key Insights</h2>
+                    <blockquote>
+                        <p>"This internship taught me that data engineering is as much about human psychology as it is about technology. People move entire data tables, leave rows half-filled, and add comments in unexpected places. Robust data systems must be designed for human unpredictability."</p>
+                    </blockquote>
+                    
+                    <p>The experience demonstrated how thoughtful data engineering can transform regulatory compliance from a burden into a strategic capability that supports both current operations and future growth opportunities.</p>
+                </div>
+
+                <div class="documents">
+                    <h2>Project Documentation</h2>
+                    <div class="links-container">
+                        <a href="internship/internshipRealisation-KyanoTrevisan.pdf" class="about-button" target="_blank">Realization Document</a>
+                        <a href="internship/internshipReflection-KyanoTrevisan.pdf" class="about-button" target="_blank">Reflection Document</a>
+                        <a href="internship/weeklyStatusReport-KyanoTrevisan.pdf" class="about-button" target="_blank">Weekly Status Reports</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
