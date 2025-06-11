@@ -11,6 +11,7 @@
 <body>
     <header>
         <nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../about.html">About Me</a></li>
@@ -262,6 +263,39 @@
             </section>
         </article>
     </main>
-</body>
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('nav ul');
+            
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('mobile-open');
+                    
+                    // Update aria-expanded for accessibility
+                    const isOpen = navMenu.classList.contains('mobile-open');
+                    mobileToggle.setAttribute('aria-expanded', isOpen);
+                });
 
+                // Close menu when clicking on a link
+                const navLinks = navMenu.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('mobile-open');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('nav')) {
+                        navMenu.classList.remove('mobile-open');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
 </html>

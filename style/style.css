@@ -28,19 +28,29 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
   background-color: var(--battleship-gray);
   color: var(--dark-green);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 a {
   text-decoration: none;
   color: var(--dark-spring-green);
   transition: color 0.3s ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 a:hover {
   color: var(--dark-green);
+}
+
+a:focus {
+  outline: 2px solid var(--dark-spring-green);
+  outline-offset: 2px;
 }
 
 h1,
@@ -877,108 +887,494 @@ img {
   transform: scale(1.02);
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
+/* Mobile-first responsive design */
+/* Mobile hamburger menu */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--dark-green);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle:focus {
+  outline: 2px solid var(--dark-spring-green);
+  outline-offset: 2px;
+}
+
+/* Small mobile devices (320px to 480px) */
+@media screen and (max-width: 480px) {
+  /* Navigation improvements */
+  nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   nav ul {
+    display: none;
     flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(241, 244, 243, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    gap: 0.75rem;
+    box-shadow: 0 4px 6px rgba(10, 49, 32, 0.1);
+  }
+
+  nav ul.mobile-open {
+    display: flex;
+  }
+
+  nav a {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    min-height: 44px;
+    display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
   }
 
-  .project-card {
-    padding: 1.5rem;
-  }
-
-  .skills-overview {
-    grid-template-columns: 1fr;
-    padding: 2rem;
+  /* Hero section adjustments */
+  .hero-section {
+    padding: 6rem 1rem 3rem;
+    text-align: center;
   }
 
   .hero-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
   }
 
   .hero-section h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
 
+  .intro-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  /* Skills overview mobile layout */
+  .skills-overview {
+    padding: 1.5rem;
+    margin: 2rem auto;
+    display: block;
+  }
+
+  .skills-group {
+    margin-bottom: 2rem;
+  }
+
+  .skills-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .skills-group h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .skills-group ul {
+    font-size: 0.9rem;
+  }
+
+  .skills-group li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  /* CTA buttons mobile */
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .about-button,
+  .project-button {
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* About page mobile */
   .about-section {
-    padding: 2rem 1rem;
+    padding: 6rem 1rem 3rem;
   }
 
   .about-header h1 {
     font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .location-info {
+    font-size: 1rem;
+  }
+
+  .location-info p {
+    margin: 0.5rem 0;
+    word-break: break-word;
+  }
+
+  .about-content h2 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .education-item {
-    padding: 0.8rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
 
+  .education-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .education-item p {
+    font-size: 0.9rem;
+  }
+
+  /* Projects page mobile */
   .projects-page {
-    padding: 2rem 1rem;
+    padding: 6rem 1rem 3rem;
+  }
+
+  .projects-section h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+    margin-bottom: 0;
   }
 
   .project-card.featured {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    gap: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .project-header {
+    padding: 0;
+  }
+
+  .project-content {
+    padding: 1rem 0 0;
+  }
+
+  .project-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .tech-stack {
+    margin: 1rem 0;
+  }
+
+  .tech-stack span {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    margin: 0.25rem 0.25rem 0.25rem 0;
   }
 
   .project-links {
     flex-direction: column;
-  }
-
-  .project-button {
-    text-align: center;
-  }
-
-  .project-detail-page {
-    padding: 2rem 1rem;
-  }
-
-  .project-detail-header h1 {
-    font-size: 2rem;
-  }
-
-  .key-features ul {
-    grid-template-columns: 1fr;
-  }
-
-  .implementation-phase {
-    padding: 1.5rem;
-  }
-
-  .links-container {
-    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
   }
 
   .project-button {
     width: 100%;
-    text-align: center;
+    min-height: 44px;
+  }
+
+  /* Project detail pages mobile */
+  .project-detail-page {
+    padding: 6rem 1rem 3rem;
+  }
+
+  .project-detail-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-meta {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .project-meta .tech-stack span {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .key-features ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .key-features li {
+    padding: 1.25rem;
+  }
+
+  .implementation-phase,
+  .challenge-item,
+  .component-card {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .links-container {
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .demo-screenshots {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .component-card {
-    padding: 1.5rem;
-  }
-
-  .code-example,
-  .geojson-example {
+  .code-example {
     padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .code-example pre {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+    overflow-x: auto;
   }
 
   .workflow-container {
     grid-template-columns: 1fr;
-  }
-
-  .project-workflow {
-    padding: 1rem;
+    gap: 1rem;
   }
 
   .workflow-step {
-    padding: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .workflow-step h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Internship page mobile styles */
+  .achievement-item,
+  .impact-item {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .achievement-item h3,
+  .impact-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .technologies .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .technologies .tech-stack span {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    margin: 0;
+  }
+
+  blockquote {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 4px solid var(--dark-spring-green);
+    background-color: var(--alabaster);
+    font-style: italic;
+  }
+
+  blockquote p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Footer mobile */
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+}
+
+/* Tablets and small laptops (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  nav ul {
+    gap: 1.5rem;
+  }
+
+  nav a {
+    padding: 0.6rem 1.2rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-section {
+    padding: 7rem 2rem 4rem;
+  }
+
+  .hero-section h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .skills-overview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .about-section {
+    padding: 7rem 2rem 4rem;
+  }
+
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .projects-page {
+    padding: 7rem 2rem 4rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card.featured {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .project-detail-page {
+    padding: 7rem 2rem 4rem;
+  }
+
+  .key-features ul {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .workflow-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Large tablets and small desktops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  .project-card.featured {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .workflow-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .key-features ul {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* Ensure images are always responsive */
+@media screen and (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .project-card img,
+  .image-container img,
+  .demo-screenshots img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container video,
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
