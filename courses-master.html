@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Courses - Kyano Trevisan</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .course-card {
+            background: var(--antiflash-white);
+            border-left: 5px solid var(--dark-spring-green);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .course-card h3 {
+            margin-top: 0;
+            color: var(--dark-spring-green);
+            font-size: 1.2rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 0.5rem 0 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .course-badge {
+            background: var(--dark-spring-green);
+            color: var(--antiflash-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .course-badge.completed {
+            background: #4CAF50;
+        }
+
+        .course-badge.in-progress {
+            background: #2196F3;
+        }
+
+        .course-badge.upcoming {
+            background: #FF9800;
+        }
+
+        .course-details {
+            margin-top: 1rem;
+        }
+
+        .course-section {
+            margin-bottom: 1rem;
+        }
+
+        .course-section h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark-green);
+            margin: 0.75rem 0 0.5rem 0;
+        }
+
+        .course-section ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .course-section li {
+            margin-bottom: 0.4rem;
+        }
+
+        .course-content-text {
+            font-size: 0.9rem;
+            color: var(--dark-green);
+            line-height: 1.6;
+        }
+
+        .status-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .status-header .course-code {
+            font-weight: 600;
+            color: var(--battleship-gray);
+            font-size: 0.85rem;
+        }
+
+        .credits {
+            font-size: 0.85rem;
+            color: var(--battleship-gray);
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="internship.html">Internship</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-page">
+        <section class="about-section">
+            <div class="about-header">
+                <h1>Master's Courses</h1>
+                <div class="location-info">
+                    <p>📚 Högskolan Väst - Cybersecurity (TACYB)</p>
+                    <p>🎓 Master of Science in Cybersecurity</p>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="professional-summary">
+                    <h2>Course Overview</h2>
+                    <p>My Master's program in Cybersecurity at Högskolan Väst spans 60 ECTS credits across multiple specialized courses. Below is detailed information about each course, including learning outcomes, content, and assessment methods.</p>
+                </div>
+
+                <div class="course-grid">
+                    <!-- Completed Courses -->
+                    <div class="course-card">
+                        <div class="status-header">
+                            <div>
+                                <h3>Cyber-physical Systems Security</h3>
+                                <div class="course-code">SCS600</div>
+                            </div>
+                            <span class="course-badge completed">Completed</span>
+                        </div>
+                        <div class="credits">7.5 ECTS</div>
+
+                        <div class="course-details">
+                            <div class="course-section">
+                                <h4>Overview</h4>
+                                <p class="course-content-text">Focuses on main cybersecurity aspects of IoT, Industrial Internet, Smart Cities, Smart Grid, and connected systems. Students learn security architecture principles, network security, and cyber-physical security concepts including physical, logical, and organizational security.</p>
+                            </div>
+
+                            <div class="course-section">
+                                <h4>Learning Outcomes</h4>
+                                <ul>
+                                    <li>Describe various types of cyber-physical systems and their applications</li>
+                                    <li>Identify vulnerabilities and threats in cyber-physical systems</li>
+                                    <li>Differentiate between physical, logical, and organizational security</li>
+                                    <li>Select proper tools and methods to counteract threats</li>
+                                    <li>Understand impact of cyber-physical systems on society</li>
+                                </ul>
+                            </div>
+
+                            <div class="course-section">
+                                <h4>Assessment</h4>
+                                <p class="course-content-text">Individual written exam, laboratory work in groups with presentations, and group seminars with oral presentations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="status-header">
+                            <div>
+                                <h3>Principles of Cybersecurity</h3>
+                                <h3 style="margin-top: 0;"></h3>
+                                <div class="course-code">PFC610</div>
+                            </div>
+                            <span class="course-badge completed">Completed</span>
+                        </div>
+                        <div class="credits">7.5 ECTS</div>
+
+                        <div class="course-details">
+                            <div class="course-section">
+                                <h4>Overview</h4>
+                                <p class="course-content-text">Provides a broad overview of cybersecurity and its relation to IT security. Covers threats, systems and their weaknesses, preventive defenses (cryptography, AAA, firewalls), and organizational defenses. Based on Cisco Network Academy's CyberOps Associate program.</p>
+                            </div>
+
+                            <div class="course-section">
+                                <h4>Learning Outcomes</h4>
+                                <ul>
+                                    <li>Describe cybersecurity concepts, terminology, and threat phases</li>
+                                    <li>Explain common threats to networks and end devices</li>
+                                    <li>Classify different types of cyber security attacks</li>
+                                    <li>Analyze data communication intrusions and identify vulnerabilities</li>
+                                    <li>Use monitoring tools to identify different types of attacks</li>
+                                </ul>
+                            </div>
+
+                            <div class="course-section">
+                                <h4>Assessment</h4>
+                                <p class="course-content-text">Individual written exam, laboratory work in groups with presentations, and group seminars with oral presentations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- In Progress Courses -->
+                    <div class="course-card">
+                        <div class="status-header">
+                            <div>
+                                <h3>Cloud Security</h3>
+                                <div class="course-code">SIM600</div>
+                            </div>
+                            <span class="course-badge in-progress">In Progress</span>
+                        </div>
+                        <div class="credits">7.5 ECTS</div>
+
+                        <div class="course-details">
+                            <div class="course-section">
+                                <h4>Overview</h4>
+                                <p class="course-content-text">Covers cybersecurity in cloud services and systems with hands-on experience in live cloud environments. Includes introduction to research methodology applied to academic study of cloud security topics.</p>
+                            </div>
+
+                            <div class="course-section">
+                                <h4>Learning Outcomes</h4>
+                                <ul>
+                                    <li>Explain cloud computing architectures and security principles</li>
+                                    <li>Describe cybersecurity threats and vulnerabilities in cloud systems</li>
+                                    <li>Setup and configure identity and authentication services</li>
+                                    <li>Identify, manage, and protect cloud data and assets</li>
+                                    <li>Use methods and tools to identify and reduce vulnerabilities</li>
+                                </ul>
+                            </div>
+
+                            <div class="course-section">
+                                <h4>Assessment</h4>
+                                <p class="course-content-text">Individual written exam, lab assignments in groups with oral examination, and project with individual oral and written examination.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="status-header">
+                            <div>
+                                <h3>Privacy, Law, Policy & Compliance</h3>
+                                <div class="course-code">SLP600</div>
+                            </div>
+                            <span class="course-badge in-progress">In Progress</span>
+                        </div>
+                        <div class="credits">7.5 ECTS</div>
+
+                        <div class="course-details">
+                            <div class="course-section">
+                                <h4>Overview</h4>
+                                <p class="course-content-text">Provides overview of laws and ethical issues related to cybersecurity. Identifies policies, rules, and procedures that ensure connected devices and networks meet acceptable security levels based on emerging cybersecurity frameworks.</p>
+                            </div>
+
+                            <div class="course-section">
+                                <h4>Learning Outcomes</h4>
+                                <ul>
+                                    <li>Recognize and explain major legal aspects of data privacy</li>
+                                    <li>Identify and interpret cybersecurity policy concepts</li>
+                                    <li>Understand differences between standards and regulations</li>
+                                    <li>Suggest effective mechanisms to respond to cybersecurity risks</li>
+                                    <li>Critically reflect on social and ethical aspects of privacy</li>
+                                </ul>
+                            </div>
+
+                            <div class="course-section">
+                                <h4>Assessment</h4>
+                                <p class="course-content-text">Individual written exam and project with written report and oral presentation in group.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Courses -->
+                    <div class="course-card">
+                        <div class="status-header">
+                            <div>
+                                <h3>Ethical Hacking & Penetration Testing</h3>
+                                <div class="course-code">EHP600</div>
+                            </div>
+                            <span class="course-badge upcoming">Upcoming</span>
+                        </div>
+                        <div class="credits">7.5 ECTS</div>
+
+                        <div class="course-details">
+                            <div class="course-section">
+                                <h4>Overview</h4>
+                                <p class="course-content-text">Covers ethical hacking, penetration testing methodologies, and IT forensics. This course provides hands-on experience in authorized security testing and vulnerability assessment techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="status-header">
+                            <div>
+                                <h3>AI-based Risk Assessment</h3>
+                                <div class="course-code">AIR600</div>
+                            </div>
+                            <span class="course-badge upcoming">Upcoming</span>
+                        </div>
+                        <div class="credits">7.5 ECTS</div>
+
+                        <div class="course-details">
+                            <div class="course-section">
+                                <h4>Overview</h4>
+                                <p class="course-content-text">Focuses on AI-based approaches to risk assessment and management in cybersecurity contexts. Explores machine learning techniques for identifying and mitigating security risks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="status-header">
+                            <div>
+                                <h3>Master of Science Thesis</h3>
+                                <div class="course-code">EXD630</div>
+                            </div>
+                            <span class="course-badge upcoming">Upcoming</span>
+                        </div>
+                        <div class="credits">15.0 ECTS</div>
+
+                        <div class="course-details">
+                            <div class="course-section">
+                                <h4>Overview</h4>
+                                <p class="course-content-text">The final component of the Master's program. A comprehensive independent research project in Computer Science or a related cybersecurity domain, demonstrating mastery of specialized knowledge and research skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="professional-summary">
+                    <h2>Program Summary</h2>
+                    <p><strong>Total Credits:</strong> 60.0 ECTS</p>
+                    <p><strong>Institution:</strong> Högskolan Väst (University West), Trollhättan, Sweden</p>
+                    <p><strong>Program:</strong> Master in Cybersecurity (TACYB)</p>
+                    <p><strong>Duration:</strong> September 2025 - Present</p>
+                    <p><strong>Language:</strong> All courses taught in English</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <a href="about.html" class="about-button">Back to About Me</a>
+                <a href="projects.html" class="about-button">View My Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('nav ul');
+
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('mobile-open');
+
+                    // Update aria-expanded for accessibility
+                    const isOpen = navMenu.classList.contains('mobile-open');
+                    mobileToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close menu when clicking on a link (for single-page navigation)
+                const navLinks = navMenu.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('mobile-open');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('nav')) {
+                        navMenu.classList.remove('mobile-open');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

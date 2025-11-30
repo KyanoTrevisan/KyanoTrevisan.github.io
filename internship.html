@@ -33,29 +33,31 @@
 
             <div class="about-content">
                 <div class="professional-summary">
-                    <h2>Executive Summary</h2>
-                    <p>During my 13-week data engineering internship at ACA Group, I contributed to the "Sustainathon 2025" project - a mission-critical initiative to revolutionize Duvel Moortgat's sustainability reporting for CSRD (Corporate Sustainability Reporting Directive) compliance. This project transformed a functional proof-of-concept into a production-ready, maintainable platform that supports comprehensive regulatory requirements.</p>
-                    
-                    <p>The implementation delivered substantial technical improvements through code optimization and architectural restructuring. I reduced the codebase from over 300 lines to under 80 lines using dynamic Jinja templating across 39 models, improved processing time from 45 minutes to 20 minutes, and implemented a simplified data model with enhanced error handling throughout the system.</p>
+                    <h2>Overview</h2>
+                    <p>I spent 13 weeks at ACA Group working on the "Sustainathon 2025" project, helping Duvel Moortgat build a system for CSRD (Corporate Sustainability Reporting Directive) compliance. The project took what was a working proof-of-concept and transformed it into a production-ready platform that could actually scale and maintain itself.</p>
+
+                    <p>The bulk of my work involved optimizing and restructuring the code and data architecture. Instead of manually writing out the same code pattern for every location and data type, I introduced dynamic Jinja templating that loops through locations and applies the right suffixes. This pattern was repeated across many models, cutting hundreds of lines of repetitive code. I also reduced processing time across the entire pipeline, and simplified the data model while improving error handling. Those improvements added up to something that was more maintainable.</p>
                 </div>
 
                 <div class="project-overview">
-                    <h2>Project Context</h2>
-                    <p>Duvel Moortgat NV, Belgium's premier brewery group with facilities across multiple countries, needed to comply with the European CSRD regulations. This legislation requires comprehensive sustainability reports covering environmental impact, social aspects, and governance metrics with precise documentation and audit trails.</p>
-                    
-                    <p>Working alongside fellow intern Fabian Reyes under the mentorship of Kwinten Boes (Project Manager) and Thibo Vanderkam (Data Engineer), I focused on data engineering aspects while Fabian concentrated on dashboard development and client communication.</p>
+                    <h2>The Problem</h2>
+                    <p>Duvel Moortgat is a major brewery group operating across multiple countries. Like many companies, they needed to meet the CSRD regulations, which is a European directive requiring companies to report on their sustainability impact. This meant collecting data on environmental impact, social aspects, and governance metrics from dozens of facilities, all tracked with audit trails and documentation.</p>
+
+                    <p>The groundwork had already been laid. Kwinten Boes (Project Manager) and Thibo Vanderkam (Data Engineer, my tech lead) had built a proof of concept the year before. They did solid work on it, but their internship was disrupted when the client got hacked, which set them back significantly. Because of the time crunch, the codebase worked fine but was messy in places.</p>
+
+                    <p>I worked alongside Fabian Reyes, another intern who was a data analyst. His role was to take the data I prepared in the gold layer and use it to build reports and dashboards for the client. My focus was on making sure the data pipeline was clean, maintainable, and actually scalable. Thibo was my tech lead throughout, helping me navigate decisions and the codebase we inherited.</p>
                 </div>
 
                 <div class="technical-achievements">
                     <h2>Technical Achievements</h2>
                     
                     <div class="achievement-item">
-                        <h3>🚀 Code Optimization & Maintainability</h3>
+                        <h3>Code Optimization & Maintainability</h3>
                         <ul>
-                            <li>Implemented dynamic Jinja templating across 39 Silver source layer models</li>
-                            <li>Reduced water model code from 300+ lines to under 80 lines (75% reduction)</li>
-                            <li>Eliminated hundreds of lines of repetitive code system-wide</li>
-                            <li>Transformed location addition from 20-step manual process to 2-step configuration</li>
+                            <li>Implemented dynamic Jinja templating to replace repetitive code patterns across 39 models</li>
+                            <li>In the water model alone, reduced code from 300+ lines to under 80 lines by using loops instead of manually writing UNION ALL for each location</li>
+                            <li>Used macros to centralize location handling, pulling location prefixes and applying suffixes dynamically instead of hardcoding location codes</li>
+                            <li>Simplified adding new facilities from a 20-step manual process to just updating a couple of configuration places</li>
                         </ul>
                         
                         <div class="image-container">
@@ -65,22 +67,23 @@
                     </div>
 
                     <div class="achievement-item">
-                        <h3>⚡ Performance & Processing Improvements</h3>
+                        <h3>Performance & Processing</h3>
                         <ul>
-                            <li>Reduced integration pipeline processing time from 45 minutes to 20 minutes (55% improvement)</li>
-                            <li>Implemented multithreading for parallel data source processing</li>
-                            <li>Optimized Microsoft Fabric Compute Unit (CU) usage</li>
-                            <li>Enhanced error detection and monitoring capabilities</li>
+                            <li>Reduced end-to-end processing time from 45 minutes to 20 minutes (55% faster)</li>
+                            <li>Optimized SharePoint data extraction and lakehouse ingestion</li>
+                            <li>Added multithreading to process multiple data sources in parallel</li>
+                            <li>Streamlined the Bronze to Silver to Gold pipeline transformations</li>
+                            <li>Improved error detection and monitoring across the entire pipeline</li>
                         </ul>
                     </div>
 
                     <div class="achievement-item">
-                        <h3>🏗️ Architectural Improvements</h3>
+                        <h3>Architecture & Infrastructure</h3>
                         <ul>
-                            <li>Restructured medallion architecture with Bronze, Silver (Source/Enriched), and Gold layers</li>
-                            <li>Implemented test and production environments for safe development</li>
-                            <li>Enhanced data quality controls and audit trails for CSRD compliance</li>
-                            <li>Simplified data model consolidating multiple fact tables</li>
+                            <li>Restructured the data pipeline using a medallion architecture (Bronze, Silver, Gold layers)</li>
+                            <li>Set up separate test and production environments for safe development and deployment</li>
+                            <li>Built in data quality checks and audit trails to ensure CSRD compliance</li>
+                            <li>Simplified the data model by consolidating multiple fact tables</li>
                         </ul>
                         
                         <div class="image-container">
@@ -90,8 +93,8 @@
                     </div>
 
                     <div class="achievement-item">
-                        <h3>📊 Data Model Evolution</h3>
-                        <p>The data model underwent significant simplification and optimization to support comprehensive sustainability reporting:</p>
+                        <h3>Data Model Evolution</h3>
+                        <p>The data model went through significant simplification by consolidating many models into fewer, more efficient ones. This made it easier for me to work with as a data engineer and made it easier for the data analysts to build dashboards on top of it. Here's what changed:</p>
                         
                         <div class="image-container">
                             <img src="internship/old-DataModel.svg" alt="Original complex data model diagram showing multiple fact tables and dimensional relationships before optimization">
@@ -110,12 +113,12 @@
                     
                     <br>
                     <div class="achievement-item">
-                        <h3>🔗 Integration & Data Quality</h3>
+                        <h3>Integrations & Data Quality</h3>
                         <ul>
-                            <li>Sophisticated ClimateCamp integration for environmental impact calculations</li>
-                            <li>Enhanced SharePoint integration with comprehensive error handling</li>
-                            <li>Dynamic location code extraction and assignment system</li>
-                            <li>Year-based currency conversion with automatic rate processing</li>
+                            <li>Integrated with ClimateCamp for environmental impact calculations</li>
+                            <li>Enhanced SharePoint integration with proper error handling</li>
+                            <li>Built a system to automatically extract and assign location codes</li>
+                            <li>Implemented currency conversion with automatic rate updates</li>
                         </ul>
                     </div>
                 </div>
@@ -137,54 +140,41 @@
                 </div>
 
                 <div class="business-impact">
-                    <h2>Business Impact</h2>
+                    <h2>Real-World Impact</h2>
                     <div class="impact-grid">
                         <div class="impact-item">
-                            <h3>Operational Excellence</h3>
-                            <p>Transformed manual, error-prone sustainability reporting into an automated, scalable system processing data from 20+ global sites across 8 countries.</p>
+                            <h3>Operations</h3>
+                            <p>What was a manual, error-prone process became an automated system that collects and processes data from over 20 facilities across 8 countries. They don't have to manually compile reports anymore.</p>
                         </div>
                         <div class="impact-item">
-                            <h3>Regulatory Compliance</h3>
-                            <p>Enabled CSRD compliance through comprehensive audit trails, data quality validation, and calculation accuracy requirements.</p>
+                            <h3>Compliance</h3>
+                            <p>The system now meets CSRD requirements with proper audit trails, data validation, and accuracy checks. That's important for a company dealing with regulatory reporting.</p>
                         </div>
                         <div class="impact-item">
-                            <h3>Future Scalability</h3>
-                            <p>Parameterized architecture enables easy addition of new facilities and adaptation to evolving regulatory requirements.</p>
+                            <h3>Flexibility</h3>
+                            <p>Adding new facilities is now straightforward. Thanks to the Jinja loops, you only update a couple of configuration places instead of adding code to every single model. We also extract location codes dynamically from the Excel files, so we don't have to hardcode them like before. The system can adapt as new facilities come online or regulations change.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="personal-growth">
-                    <h2>Personal & Professional Growth</h2>
-                    <p>This internship marked a complete transformation from student to professional consultant. I developed not only technical expertise in enterprise data platforms but also crucial soft skills in stakeholder communication, project management, and cross-functional collaboration.</p>
-                    
-                    <p>Key learning areas included:</p>
-                    <ul>
-                        <li><strong>Enterprise Technology:</strong> Mastery of Microsoft Fabric ecosystem and dbt for production-grade data engineering</li>
-                        <li><strong>Problem-Solving Evolution:</strong> From uncertain debugging to systematic, confidence-driven solution architecture</li>
-                        <li><strong>Stakeholder Communication:</strong> Learning to translate technical solutions into business value for different audiences</li>
-                        <li><strong>Security & Operations:</strong> Implementation of Azure KeyVault, proper error handling, and production environment management</li>
-                    </ul>
+                    <h2>What I Learned</h2>
+                    <p>This internship was more than just learning tools. It was a shift in how I approach problems. I went from being a student solving academic exercises to working on something real that would be used in production. That difference matters.</p>
+
+                    <p>On the technical side, I got hands-on experience with Microsoft Fabric and dbt in a production environment, not just in tutorials. I learned how to think about data architecture, error handling, and testing in ways that matter when code affects real business operations.</p>
+
+                    <p>But the bigger learning was about the human side of engineering. I had to communicate technical decisions to non-technical stakeholders, debug issues in unfamiliar codebases, and think about how to make systems that other people would actually want to use and maintain. I also learned that working with enterprise tools like Azure KeyVault and managing production environments is different. You need to be more careful, more thoughtful, and more deliberate.</p>
                 </div>
 
                 <div class="reflection">
-                    <h2>Key Insights</h2>
-                    <blockquote>
-                        <p>"This internship taught me that data engineering is as much about human psychology as it is about technology. People move entire data tables, leave rows half-filled, and add comments in unexpected places. Robust data systems must be designed for human unpredictability."</p>
-                    </blockquote>
-                    
-                    <p>The experience demonstrated how thoughtful data engineering can transform regulatory compliance from a burden into a strategic capability that supports both current operations and future growth opportunities.</p>
+                    <h2>The Most Important Lesson</h2>
+                    <p>Data engineering isn't just about writing clean code or optimizing queries. It's about understanding how humans interact with data. During this project, I realized that people will move entire data tables by hand, leave rows half-filled, and add comments in unexpected places. They will do things that don't make sense from an engineering perspective (but make perfect sense from theirs).</p>
+
+                    <p>The systems that work are the ones designed for human reality, not human ideals. That's why the improvements we made (the simplified configuration, the error handling, the audit trails) mattered. They weren't just technical improvements. They made the system something people could actually use without breaking it.</p>
+
+                    <p>And that's what good engineering is about: making systems that help people do their jobs better, even when people don't always do what the system designers expected.</p>
                 </div>
 
-                <div class="documents">
-                    <h2>Project Documentation</h2>
-                    <div class="links-container">
-                        <a href="internship/duvelMoortgatSustainabilityDataPlatform.pdf" class="about-button" target="_blank">Project Plan</a>
-                        <a href="internship/internshipRealisation-KyanoTrevisan.pdf" class="about-button" target="_blank">Realization Document</a>
-                        <a href="internship/internshipReflection-KyanoTrevisan.pdf" class="about-button" target="_blank">Reflection Document</a>
-                        <a href="internship/weeklyStatusReport-KyanoTrevisan.pdf" class="about-button" target="_blank">Weekly Status Reports</a>
-                    </div>
-                </div>
             </div>
         </section>
     </main>

@@ -190,6 +190,11 @@ nav a:hover {
   max-width: 800px;
   margin: 0 auto 3rem;
   line-height: 1.6;
+  text-align: justify;
+}
+
+.intro-text p {
+  text-align: justify;
 }
 
 /* Skills overview styles */
@@ -307,6 +312,7 @@ footer {
 .about-content p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .interests ul {
@@ -342,6 +348,7 @@ footer {
 .education-item p {
   margin-bottom: 0.3rem;
   color: var(--dark-green);
+  text-align: justify;
 }
 
 .cta-section {
@@ -1045,6 +1052,7 @@ img {
   .about-content p {
     font-size: 0.95rem;
     line-height: 1.5;
+    text-align: justify;
   }
 
   .education-item {
@@ -1058,6 +1066,7 @@ img {
 
   .education-item p {
     font-size: 0.9rem;
+    text-align: justify;
   }
 
   /* Projects page mobile */
